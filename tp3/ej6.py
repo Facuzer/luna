@@ -6,8 +6,8 @@ def obtenerVertice(a, b, c):
     de una función cuadrática.
 
     Los parámetros a,b,c hacen referencia a los valores
-    de a,b,c en una función cuadrática los tres valores deben ser números de
-    tipo int o float.
+    de a,b,c en la siguiente ecuacion de una función cuadrática: ax**2 + bx + c
+    los tres valores deben ser números de tipo int o float.
 
     Devuelve un string diciendo en qué valores se encuentra el vértice y
     diciendo si es un máximo o mínimo.
@@ -25,7 +25,7 @@ def obtenerVertice(a, b, c):
         return("Error. La función ingresada no es una función cuadrática.")
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [a, b, c]:
-        if not(isinstance(numeros, int) or isinstance(numeros, float)):
+        if not isinstance(numeros, int) or not isinstance(numeros, float):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return("Error. Ha ingresado tipos de datos no admitidos.")
@@ -59,8 +59,8 @@ def raiz(a, b, c):
 
 
     La función recibe tres parámetros, que es a,b,c (los valores deben ser
-    numéricos) y cada uno hace referencia a los valores a,b,c de una función
-    cuadrática.
+    numéricos) y cada uno hace referencia a los valores a,b,c en la siguiente
+    ecuacion de una función cuadratica: ax**2 + bx + c
 
     Si existen dos raíces, la función devuelve los dos valores de la raíz
     en x, en caso contrario devuelve solo un valor en x. Si no existen raíces
@@ -84,7 +84,7 @@ def raiz(a, b, c):
             return("Error. Ha ingresado tipos de datos no admitidos.")
     # Creo una variable im para guardar si tengo q agregarle la i de
     # los complejos o no
-    im = ""
+    imaginario = ""
     # Me fijo si se pueden hacer las operaciones y si se puede lo hago
     try:
         loQueVaEnLaRaiz = b**2 - 4 * a * c
@@ -93,21 +93,21 @@ def raiz(a, b, c):
     except BaseException:
         # Si no se pueden hacer las operaciones, esto quiere decir que no hay
         # raíces reales, entonces en tal caso empiezo a calcular la raiz
-        # imaginaria o compleja.
+        # compleja.
         x1 = (-b + math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
         x2 = (-b - math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
         # Seteo la variable de los complejos con una i para saber que
         # tengo que agregarle la i ya que son complejos.
-        im = "i"
+        imaginario = "i"
     # Paso a int los resultados si se puede
     if x1 % 1 == 0:
         x1 = int(x1)
     if x2 % 1 == 0:
         x2 = int(x2)
     # Me fijo si hay un resultado o dos para dar
-    if im == "i":
-        x1 = str(x1) + im
-        x2 = str(x2) + im
+    if imaginario == "i":
+        x1 = str(x1) + imaginario
+        x2 = str(x2) + imaginario
     if x1 != x2:
         # Si hay dos devuelvo 2
         return x1, x2
@@ -158,13 +158,13 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1, pendiente2, ordenadaOri
     # Creo una variable i(intersección) y le asigno el valor de la
     # intersección, este valor queda definido igualando las dos funciones y
     # pasando un valor para el otro lado.
-    i = -(ordenadaOrigen2 - ordenadaOrigen1) / (pendiente2 - pendiente1)
+    interseccion = -(ordenadaOrigen2 - ordenadaOrigen1) / (pendiente2 - pendiente1)
     # Intento ver si puedo pasar el resultado a int.
-    if i % 1 == 0:
+    if interseccion % 1 == 0:
         # Si se puede lo paso.
-        i = int(i)
+        interseccion = int(interseccion)
     # Devuelvo el valor.
-    return i
+    return interseccion
 
 
-print(raiz(5, 24, -3))
+# print(raiz(5, 24, -3))

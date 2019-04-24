@@ -11,17 +11,17 @@ def matrizIdentidad(n):
     matriz."""
     # Me fijo si el valor dado es de tipo int, caso contrario informo que se
     # cometió un error
-    if not(isinstance(n, int)):
+    if not isinstance(n, int):
         print("Ingresó un tipo de variable no soportado. ",
               "Ingrese un número de tipo int.")
         return
     # Me fijo si me dió un valor negativo, si es asi lo informo.
-    if not(n > 0):
+    if not n > 0:
         print("Ingresó un tipo de variable no soportado. ",
               "Ingrese un número mayor que 0")
         return
     # Me fijo si me dió un valor fuera de las cotas.
-    if not(n >= 50):
+    if not n >= 50:
         print("Ingreso un valor fuera de las cotas(1-50)")
     # Creo dos variables para saber: si ya puse el 1 y qué lugar debe ocupar
     # el 1 en la próxima iteración del bloque for.
@@ -57,4 +57,4 @@ def matrizIdentidad(n):
         print("\n")
 
 
-# matrizIdentidad(43)
+matrizIdentidad(10)

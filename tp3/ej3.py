@@ -11,7 +11,7 @@ def nTriagulares(n):
     solicitado."""
     # Me fijo si me dió un valor de tipo distinto a int, si es asi salgo del
     # programa.
-    if not(isinstance(n, int)):
+    if not isinstance(n, int):
         return
     # Me fijo si me dió un valor negativo, y si es así salgo de la función.
     if not(n >= 0):
@@ -34,7 +34,7 @@ def nTriagulares(n):
 bien = False
 # Hago un bucle para pedirle al usuario que me diga cuantos números
 # triangulares quiere, y si me da caracteres, le vuelvo a pedir.
-while not(bien):
+while not bien:
     # Seteo en bien para empezar el paso del bucle asi.
     bien = True
     # Le pido un numero

@@ -40,7 +40,7 @@ def distanciaCentro(listaPuntos):
     return distancia
 
 
-# Creo puntos para guardar lo pedido.
+# Creo puntos y guardo en ellos el valor que voy a pedir.
 punto1 = [int(input("Ingrese el valor en X del punto 1: ")),
           int(input("Ingrese el valor en Y del punto 1: "))]
 punto2 = [int(input("Ingrese el valor en X del punto 2: ")),

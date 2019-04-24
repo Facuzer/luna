@@ -31,26 +31,34 @@ def evaluarExamenes(cantidadEjs, porcentajeAprobacion):
     # Hago un bucle indefinido hasta que el profesor ingrese en el input el
     # valor '*'
     while(cantidadEjsBien != "*"):
-        # Hago un input para pedir la cantidad de ejercicios bien que resolvió
-        # este alumno y lo guardo en la variable.
-        cantidadEjsBien = input(
-            "Indique cuántos ejercicios resolvio bien el alumno {}: ".format
-            (i))
-        # Me fijo si puedo pasar el valor ingresado a int, si me salta una
-        # excepcion, esto significa que: o ingreso un valor no numérico o
-        # ingreso el valor centinela hago esto ahora porque si dejo que el
-        # programa siga me tiraría error al pasar el valor '*' o un valor
-        # de tipo string a tipo int.
-        try:
-            # Intento pasarlo a int
-            cantidadEjsBien = int(cantidadEjsBien)
-        except BaseException:
-            # Me fijo si ingreso '*'
-            if cantidadEjsBien == "*":
-                # Si es asi, salgo del for para que no haga todo el resto de
-                # las instrucciones
-                break
-        # Aca en adelante pasa si el valor ingresado no es '*' o no es string
+        # Me fijo si me dio el valor centinela
+        if cantidadEjsBien == "*":
+            break  # Si es asi, salgo del while.
+        # Creo una variable para saber si tengo que seguir en el bucle o no
+        sigo = True
+        while sigo:  # Hago un bucle para saber si me dio bien el valor  
+            # Seteo la variable centinela en false, para que ya este asi.
+            sigo = False
+            # Hago un input para pedir la cantidad de ejercicios bien que resolvió
+            # este alumno y lo guardo en la variable.
+            cantidadEjsBien = input(
+                "Indique cuántos ejercicios resolvio bien el alumno {}: ".format
+                (i))
+            try:  # Intento pasarlo a int
+                cantidadEjsBien = int(cantidadEjsBien)
+            except ValueError:
+                # Si hay error, significa que ingreso un tipo de dato no int.
+                # Entonces seteo la variable sigo en True.
+                print("Ingreso un tipo de dato no admitido, intente de nuevo")
+                sigo = True
+            # Ahora me quiero fijar si me dijo que hay mas ejercicios de los
+            # ejercicios totales de la prueba.
+            if cantidadEjsBien > cantidadEjs:
+                print("Ingreso un numero mayor a los ejercicios totales.", end="")
+                print(" Intente de nuevo.")
+                sigo = True
+        # Aca en adelante pasa si el valor ingresado no es '*' y
+        # no es string
 
         # Calculo el porcentaje de la prueba del alumno con una simple
         # ecuación.
@@ -65,7 +73,7 @@ def evaluarExamenes(cantidadEjs, porcentajeAprobacion):
         # o no.
         print(
             "El alumno {} resolvió bien el {}% de la evaluación. {}".format(
-                i, porcentajeAlumno, aprobo))
+            i, porcentajeAlumno, aprobo))
         # Le sumo a la variable iterador 1 para luego poder tener el número de
         # alumno en el que se encuentra el bucle.
         i = i + 1

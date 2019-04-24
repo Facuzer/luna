@@ -14,11 +14,11 @@ def anioEnNumerosRomanos(anio):
     texto informando el error que se cometió."""
     # Empiezo checkeando si hay algun error en el año dado.
     # Si no es int lo informo y salgo de la función.
-    if not(isinstance(anio, int)):
+    if not isinstance(anio, int):
         return "Error. Se ingresó un tipo de dato no soportado."
     # Si no está en el rango 0 a 1 000 000 entonces lo informo y salgo de la
     # función
-    if not(anio >= 0 and anio <= 1000000):
+    if not (anio >= 0 and anio <= 1000000):
         return "Error. Se ingresó un valor fuera de las cotas(0-1 000 000)."
     # Ta todo ok entonces sigo
 
@@ -65,7 +65,7 @@ def anioEnNumerosRomanos(anio):
     unidadDeMillon = ("", u"M\u0305")
     # Creo una tupla con las tuplas para poder recorrerlas más fácil cuando
     # use el for.
-    lista = (
+    listaDeTuplas = (
         unidad,
         decena,
         centena,
@@ -74,7 +74,7 @@ def anioEnNumerosRomanos(anio):
         centenaDeMil,
         unidadDeMillon)
     # Creo una variable para guardar el número final
-    final = ""
+    numeroRomanoFinal = ""
     # Paso el año a string para poder operar bien con él.
     anio = str(anio)
     # Creo una variable len con la lengitud del año, ya que lo uso varias
@@ -89,15 +89,15 @@ def anioEnNumerosRomanos(anio):
     for i in range(Len, -1, -1):
         # Creo una variable para guardar la tupla que voy a usar en este bucle
         # y la igualo a la tupla correspondiente.
-        tipoDeCaracter = lista[j]
+        tipoDeCaracter = listaDeTuplas[j]
 
         ch = int(anio[i - 1])
-        final = tipoDeCaracter[ch] + final
+        numeroRomanoFinal = tipoDeCaracter[ch] + numeroRomanoFinal
         if j == Len - 1:
             break
         j += 1
 
-    return final
+    return numeroRomanoFinal
 
 
 print(anioEnNumerosRomanos(1015))

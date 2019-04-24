@@ -1,4 +1,4 @@
-def queDiaEs(diaDelanio):
+def queDiaEs(diaDelAnio):
     """ Función que, suponiendo que el primer día del año es lunes, imprime el día
     de la semana que es, dado el día del año.
 
@@ -9,13 +9,13 @@ def queDiaEs(diaDelanio):
     cotas o se haya dado un tipo de dato incorrecto, imprimirá en pantalla
     avisando el error y especificando cuál fue."""
     # Me fijo si hay algun error al llamar a la función
-    # Si me dieron un diaDelanio de tipo distinto a int entonces que devuelva
+    # Si me dieron un diaDelAnio de tipo distinto a int entonces que devuelva
     # error
-    if not(isinstance(diaDelanio, int)):
+    if not isinstance(diaDelAnio, int):
         print("Error. Se ingreso un tipo de dato no admitido.")
-    # Si me dieron un diaDelanio que no esta entre 1 y 366 entonces que me
+    # Si me dieron un diaDelAnio que no esta entre 1 y 366 entonces que me
     # devuelva error
-    if not(diaDelanio > 0 or diaDelanio <= 366):
+    if not(diaDelAnio > 0 or diaDelAnio <= 366):
         print("Error. Se ingreso un valor que no está entre 1 y 366.")
     # Está todo ok entonces empiezo
 
@@ -33,12 +33,12 @@ def queDiaEs(diaDelanio):
         "Domingo"
     )
     # Me fijo qué dia del año es con una simple ecuación.
-    diaDelanio = diaDelanio - (diaDelanio // 7) * 7
+    diaDelAnio = diaDelAnio - (diaDelAnio // 7) * 7
     # Paso el día del año que me quedó en números a letras, gracias a la
     # tupla.
-    diaDelanio = diasEnLetras[diaDelanio]
+    diaDelAnio = diasEnLetras[diaDelAnio]
     # Imprimo el día del año en pantalla.
-    print(diaDelanio)
+    print(diaDelAnio)
 
 # Esto es para probar si funciona todo xd
 # for i in range (1,367):
