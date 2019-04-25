@@ -16,17 +16,17 @@ def nTriagulares(n):
     # Me fijo si me dió un valor negativo, y si es así salgo de la función.
     if not(n >= 0):
         return
-    # Variable que creo para almacenar el valor de i en el anterior paso del
-    # bucle.
-    anterior = 0
+    # Variable que creo para almacenar los valores de los otros bucles
+    # sumados.
+    valoresAnteriores = 0
     for i in range(1, n + 1):
         # Imprimo en pantalla el valor de i, es decir el paso del bucle en el
         # que está el programa y luego el valor del anterior número sumado a i
         # (Es decir el valor del número triangular)
-        print("{} - {}".format(i, anterior + i))
+        print("{} - {}".format(i, valoresAnteriores + i))
         # Le sumo a la variable el valor de i para poder luego imprimir en
         # pantalla en los próximos bucles.
-        anterior += i
+        valoresAnteriores += i
 
 
 # Creo una variable para saber si me dió bien el valor es decir si es
