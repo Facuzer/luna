@@ -25,7 +25,7 @@ def obtenerVertice(a, b, c):
         return("Error. La función ingresada no es una función cuadrática.")
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [a, b, c]:
-        if not isinstance(numeros, int) or not isinstance(numeros, float):
+        if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return("Error. Ha ingresado tipos de datos no admitidos.")
@@ -141,7 +141,7 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1,
     ocurrido."""
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [pendiente1, ordenadaOrigen1, pendiente2, ordenadaOrigen2]:
-        if not isinstance(numeros, int) or not isinstance(numeros, float):
+        if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return("Error. Ha ingresado tipos de datos no admitidos.")
@@ -168,4 +168,4 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1,
     return interseccion  # Devuelvo el valor.
 
 
-# print(raiz(5, 24, -3))
+# print(obtenerVertice(1,0,4))

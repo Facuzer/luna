@@ -91,8 +91,8 @@ def anioEnNumerosRomanos(anio):
         # y la igualo a la tupla correspondiente.
         tipoDeCaracter = listaDeTuplas[j]
 
-        ch = int(anio[i - 1])
-        numeroRomanoFinal = tipoDeCaracter[ch] + numeroRomanoFinal
+        characterActual = int(anio[i - 1])
+        numeroRomanoFinal = tipoDeCaracter[characterActual] + numeroRomanoFinal
         if j == Len - 1:
             break
         j += 1
@@ -100,4 +100,5 @@ def anioEnNumerosRomanos(anio):
     return numeroRomanoFinal
 
 
-print(anioEnNumerosRomanos(1015))
+#for i in range(0,1000):
+#    print(anioEnNumerosRomanos(i))

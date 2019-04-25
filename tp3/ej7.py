@@ -29,6 +29,7 @@ def queDiaEs(diaDelAnio):
         "Martes",
         "Miércoles",
         "Jueves",
+        "Viernes",
         "Sábado",
         "Domingo"
     )
@@ -40,6 +41,6 @@ def queDiaEs(diaDelAnio):
     # Imprimo el día del año en pantalla.
     print(diaDelAnio)
 
-# Esto es para probar si funciona todo xd
-# for i in range (1,367):
-#  queDiaEs(i)
+
+for i in range (1,367):
+    queDiaEs(i)

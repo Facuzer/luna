@@ -60,7 +60,10 @@ distanciaPunto2 = distanciaCentro(punto2)  # guardar las distancias
 distanciaPunto3 = distanciaCentro(punto3)  # al centro de cada punto.
 # Comparo cada distancia para saber cuál es la más grande.
 # Y luego los imprimo en pantalla.
-if distanciaPunto1 > distanciaPunto2 and distanciaPunto1 > distanciaPunto3:
+if (distanciaPunto1 == distanciaPunto2 and 
+    distanciaPunto1 == distanciaPunto3):
+    print("Los puntos tienen la misma distancia al centro.")
+elif distanciaPunto1 > distanciaPunto2 and distanciaPunto1 > distanciaPunto3:
     print(
         "El punto 1({},{}) es el que esta mas lejos del centro ".format(
             punto1[0],
