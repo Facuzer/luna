@@ -63,8 +63,8 @@ def raiz(a, b, c):
     ecuacion de una función cuadratica: ax**2 + bx + c
 
     Si existen dos raíces, la función devuelve los dos valores de la raíz
-    en x, en caso contrario devuelve solo un valor en x. Si no existen raíces
-    la función devuelve un cadena vacía.
+    en x, en caso contrario devuelve solo un valor en x. Si la raíz es una
+    raiz compleja, también lo resuelve.
 
     El parámetro a debe ser si o si distinto a 0, porque sinó no sería una
     función cuadrática. En caso de que se de un valor de a que sea 0, o
@@ -82,7 +82,7 @@ def raiz(a, b, c):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return("Error. Ha ingresado tipos de datos no admitidos.")
-    # Creo una variable im para guardar si tengo q agregarle la i de
+    # Creo una variable im para guardar si tengo que agregarle la i de
     # los complejos o no
     imaginario = ""
     # Me fijo si se pueden hacer las operaciones y si se puede lo hago
@@ -97,17 +97,18 @@ def raiz(a, b, c):
         x1 = (-b + math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
         x2 = (-b - math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
         # Seteo la variable de los complejos con una i para saber que
-        # tengo que agregarle la i ya que son complejos.
+        # tengo que agregarle la i al final ya que el resultado es
+        # complejo.
         imaginario = "i"
     # Paso a int los resultados si se puede
     if x1 % 1 == 0:
         x1 = int(x1)
     if x2 % 1 == 0:
         x2 = int(x2)
-    # Me fijo si hay un resultado o dos para dar
-    if imaginario == "i":
+    if imaginario == "i":  # Si tengo que agregar la i la agrego.
         x1 = str(x1) + imaginario
         x2 = str(x2) + imaginario
+    # Me fijo si hay un resultado o dos para dar
     if x1 != x2:
         # Si hay dos devuelvo 2
         return x1, x2
@@ -116,7 +117,8 @@ def raiz(a, b, c):
         return x1
 
 
-def interseccionEntreRectas(pendiente1, ordenadaOrigen1, pendiente2, ordenadaOrigen2):
+def interseccionEntreRectas(pendiente1, ordenadaOrigen1, 
+                            pendiente2, ordenadaOrigen2):
     """Función que se utiliza para obtener la intersección entre dos rectas dadas
     sus pendientes y sus ordenadas de origen.
 
@@ -132,13 +134,14 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1, pendiente2, ordenadaOri
     cuanto valga el valor en x de la intersección.
 
     Si se dan dos pendientes iguales, no existíria nunca una intersección
-    o(si las ordenadas de origen tambien soy iguales) serían la misma función.
+    o(si las ordenadas de origen tambien son iguales) serían la misma función
+    y tendrían una intersección indefinida.
     En ambos casos se devolvería un string informando lo ocurrido.
     Si se ingresan datos no admitidos devolvería un error informando lo
     ocurrido."""
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [pendiente1, ordenadaOrigen1, pendiente2, ordenadaOrigen2]:
-        if not(isinstance(numeros, int) or isinstance(numeros, float)):
+        if not isinstance(numeros, int) or not isinstance(numeros, float):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return("Error. Ha ingresado tipos de datos no admitidos.")
@@ -148,23 +151,21 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1, pendiente2, ordenadaOri
         # Me fijo si las ordenadas de origen son iguales para saber si es la
         # misma función.
         if ordenadaOrigen1 == ordenadaOrigen2:
-            # Devuelvo el error especificando cual fue.
+            # Devuelvo el error especificando cuál fue.
             return "Las funciones que se ingresaron son iguales, es decir que \
                 hay una interseccion indefinida."
         else:
-            # Devuelvo el error especificando cual fue.
+            # Devuelvo el error especificando cuál fue.
             return "Las funciones ingresadas son paralelas, esto quiere decir\
                 que no existe intersección."
-    # Creo una variable i(intersección) y le asigno el valor de la
+    # Creo una variable intersección y le asigno el valor de la
     # intersección, este valor queda definido igualando las dos funciones y
     # pasando un valor para el otro lado.
     interseccion = -(ordenadaOrigen2 - ordenadaOrigen1) / (pendiente2 - pendiente1)
-    # Intento ver si puedo pasar el resultado a int.
-    if interseccion % 1 == 0:
-        # Si se puede lo paso.
-        interseccion = int(interseccion)
-    # Devuelvo el valor.
-    return interseccion
+    if interseccion % 1 == 0:  # Intento ver si puedo pasar el resultado a int.
+        interseccion = int(interseccion)  # Si se puede lo paso.
+    
+    return interseccion  # Devuelvo el valor.
 
 
 # print(raiz(5, 24, -3))
