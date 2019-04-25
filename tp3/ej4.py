@@ -24,7 +24,7 @@ def distanciaCentro(listaPuntos):
         return
     # Me fijo si ingresó algún tipo de dato no soportado
     for numero in listaPuntos:
-        if not isinstance(numero, int) or not isinstance(numero, float):
+        if not(isinstance(numero, int) or isinstance(numero, float)):
             # Si es así, salgo de la función ya que asi lo especifiqué en la
             # documentación.
             return
