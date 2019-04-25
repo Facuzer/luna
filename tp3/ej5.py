@@ -17,7 +17,7 @@ def matrizIdentidad(n):
         return
     # Me fijo si me dió un valor negativo, si es asi lo informo.
     if not n > 0:
-        print("Ingresó un tipo de variable no soportado. ",
+        print("Ingresó un tipo de numero no soportado. ",
               "Ingrese un número mayor que 0")
         return
     # Me fijo si me dió un valor fuera de las cotas.
@@ -57,4 +57,4 @@ def matrizIdentidad(n):
         print("\n")
 
 
-matrizIdentidad(10)
+# matrizIdentidad(10)
