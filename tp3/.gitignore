@@ -1,2 +1,5 @@
-"__pycache__/ej9.cpython-36.pyc"
+.gitignore
+./__pycache__
+..gitignore.swp
+./vscode/
 
