@@ -18,13 +18,13 @@ def distanciaCentro(listaPuntos):
     distanciaCentro([1,2])
     en el ejemplo, haría referencia a un punto con x=1 y y=2"""
     # Me fijo si no me dió una lista
-    if not(isinstance(listaPuntos, list)):
+    if not isinstance(listaPuntos, list):
         # Si no me dió una lista, salgo de la función sin hacer nada, ya que
         # así lo especifiqué en la documentación.
         return
     # Me fijo si ingresó algún tipo de dato no soportado
     for numero in listaPuntos:
-        if not(isinstance(numero, int) or isinstance(numero, float)):
+        if not isinstance(numero, int) or not isinstance(numero, float):
             # Si es así, salgo de la función ya que asi lo especifiqué en la
             # documentación.
             return
@@ -40,17 +40,24 @@ def distanciaCentro(listaPuntos):
     return distancia
 
 
-# Creo puntos y guardo en ellos el valor que voy a pedir.
-punto1 = [int(input("Ingrese el valor en X del punto 1: ")),
-          int(input("Ingrese el valor en Y del punto 1: "))]
-punto2 = [int(input("Ingrese el valor en X del punto 2: ")),
-          int(input("Ingrese el valor en Y del punto 2: "))]
-punto3 = [int(input("Ingrese el valor en X del punto 3: ")),
-          int(input("Ingrese el valor en Y del punto 3: "))]
-# Hago variables para guardar las distancias al centro de cada punto.
-distanciaPunto1 = distanciaCentro(punto1)
-distanciaPunto2 = distanciaCentro(punto2)
-distanciaPunto3 = distanciaCentro(punto3)
+# Creo puntos y guardo en ellos el valor que voy a pedir 
+# lo puse en un while por si me da valores no numéricos.
+sigo = True
+while sigo:
+    try:
+        sigo = False
+        punto1 = [int(input("Ingrese el valor en X del punto 1: ")),
+                int(input("Ingrese el valor en Y del punto 1: "))]
+        punto2 = [int(input("Ingrese el valor en X del punto 2: ")),
+                int(input("Ingrese el valor en Y del punto 2: "))]
+        punto3 = [int(input("Ingrese el valor en X del punto 3: ")),
+                int(input("Ingrese el valor en Y del punto 3: "))]
+    except ValueError: # Si hay un error, lo avisa y intenta de nuevo
+        print("Ingreso valores no admitidos, intente de nuevo.")
+        sigo = True
+distanciaPunto1 = distanciaCentro(punto1)  # Hago variables para
+distanciaPunto2 = distanciaCentro(punto2)  # guardar las distancias
+distanciaPunto3 = distanciaCentro(punto3)  # al centro de cada punto.
 # Comparo cada distancia para saber cuál es la más grande.
 # Y luego los imprimo en pantalla.
 if distanciaPunto1 > distanciaPunto2 and distanciaPunto1 > distanciaPunto3:
