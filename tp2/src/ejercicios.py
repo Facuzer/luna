@@ -1,53 +1,122 @@
 import math
 
+# Hago una variable pi para poder usarla en todas las funciones
+# sin necesidad de declararla duplicadas veces.
+PI = math.pi
 
-pi = math.pi
 
+def ejercicio_a(base, altura):
+    """Función que sirve para calcular el perímetro de un rectángulo
+    dadas su base y su altura.
 
-# Calcular perimetro de un rectangulo dada su base y altura
-def EjercicioA(base, altura):
+    En los parámetros se debe ingresar dos valores de tipo numéricos positivos
+    uno que hace referencia a la base y otro que hace referencia a la
+    altura de un rectángulo
+
+    La función no imprime nada, sinó que devuelve el perimetro.
+    Devuelve un valor de tipo numérico.
+
+    En caso de haber un error de tipo de variable, o que no se haya
+    ingresado, lo informará devolviendo una cadena especificando
+    el error."""
     return base * 2 + altura * 2
 # print (EjercicioA(3,4))
 
 
 # Calcular area de un rectangulo dada su base y altura
-def EjercicioB(b, h):
-    return b * h
-#print (EjercicioB(3,4))
+def ejercicio_b(base, altura):
+    """Función que sirve para calcular el área de un rectángulo dadas
+    su base y su altura.
 
-#Calcular area de un rectangulo dada x1 x2 x3 x4
-def EjercicioC(x1x, x1y, x2x, x2y, x3x, x3y, x4x, x4y):
-    # x1=abajo a la izquierda x2=arriba a la izquierda x3 = arriba
-    # a la derecha x4 = abajo a la derecha. La x al final de cada
-    # valor hace referencia a que es un valor de x y la y a que es
-    # un valor de y
-    
-    # Funcion para hacer el modulo de algo, hice una funcion pq
-    # se repetia dos veces Con modulo me refiero a |x| en 
-    # matematica
-    def moduloDe(x):
+    En los parámetros se debe ingresador dos valores de tipo numéricos
+    positivos, uno que hace referencia a la base y el otro que hace referencia a
+    la altura.
+
+    La función no imprime nada, sino que devuelve el área del
+    rectángulo dado, devuelve un tipo de dato numérico, de tipo int
+    o float dependiendo el caso.
+
+    En caso de haber un error de tipo de variable, o que no se haya
+    ingresado, lo informará devolviendo una cadena especificando
+    el error.
+    """
+    return base * altura
+
+
+def ejercicio_c(x1x, x1y, x2x, x2y, x3x, x3y, x4x, x4y):
+    """
+    Función que sirve para obtener el área de un rectángulo dadas
+    sus coordenadas en un sistema de ejes cartesianos(es decir pide
+    x1,x2,x3,x4 del rectángulo).
+
+    La función recibe los siguientes parámetros, cada uno hace
+    referencia a el valor de x o de y en el punto en el plano:
+    x1x,x1y = Valores del punto 1, es decir el de abajo a la
+              izquierda
+    x2x,x2y = Valores del punto 2, es decir el de arriba a la
+              izquierda
+    x3x,x3y = Valores del punto 3, es decir el de arriba a la derecha
+    x4x,x4y = Valores del punto 1, es decir el de abajo a la derecha
+    Todos los valores deben ser de tipo numérico.
+
+    La función no imprime nada sino que devuelve el valor pedido, que
+    es de tipo numérico.
+
+    En caso de haber un error de tipo de variable, o que no se haya
+    ingresado, lo informará devolviendo una cadena especificando
+    el error.
+    """
+    def modulo_de(x):
+        """Función que sirve para obtener el módulo o el valor real
+        de un número.
+
+        La función solo recibe un parámetro y debe ser un valor numérico,
+        y debe ser el número que se quiere obtener el módulo.
+
+        La función no imprime nada, sinó que devuelve un valor numérico
+        que es igual al módulo del número ingresado.
+
+        Si ingresa un valor de tipo no numérico, se informará en una
+        cadena de texto.
+        """
         if x < 0:
             x = -x
-        return x    
-    # Esto no se si hacia falta pero lo hice para detectar si hay algun error y no es un rectangulo
-    if (not(x1x == x2x) or not(x1y == x4y) or not(x2y==x3y) or not(x3x==x4x)):
+        return x
+    # Esto no se si hacia falta pero lo hice para detectar si hay
+    # algun error y no es un rectangulo
+    if not x1x == x2x or not x1y == x4y or not x2y == x3y or not x3x == x4x:
         return "Error, eso no es un rectangulo"
-    b = moduloDe(x1y - x2y)
-    h = moduloDe(x1x - x4x)
-    return b * h
-# print(EjercicioC(1,2,1,4,5,4,5,2))
+    base = modulo_de(x1y - x2y)
+    altura = modulo_de(x1x - x4x)
+    return base * altura
 
-# d)Calcular area y perimetro de un circulo dado el radio
-def EjercicioD(radio):
-    area = pi * (radio ** 2)
-    perimetro = 2 * pi * radio
+
+def ejercicio_d(radio):
+    """Función que sirve para calcular el área y el perímetro
+    de un círculo dado su radio.
+
+    La función recibe solo un parámetro y es el radio del
+    círculo en cuestión, debe ser un dato de tipo numérico positivo.
+
+    Si se ingresa un valor no numérico o negativo se devolvera una cadena
+    informando el error"""
+    area = PI * (radio ** 2)
+    perimetro = 2 * PI * radio
     return area, perimetro
-# print(EjercicioD(5))
 
-# e)Calcular volumen de esfera dado su radio
-def EjercicioE(r):
+
+def ejercicio_e(radio):
+    """
+    Función que sirve para obtener el volumen de una esfera dado su radio.
+
+    La función recibe un solo parámetro y es el radio de la esfera en cuestión.
+    Debe ser un dato de tipo numérico positivo.
+
+    La función no imprime nada, sino que devuelve un dato de tipo numérico que
+    hace referencia al volumen de la esfera.
+
+    Si se ingresa un valor no numérico o negativo, se devolvera un string informando
+    lo ocurrido.
+    """
     # Ecuacion = 4/3*pi*r**3
-    return 4 / 3 * pi * r ** 3
-# print(EjercicioE(5))
-
-
+    return 4 / 3 * PI * radio ** 3
