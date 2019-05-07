@@ -23,7 +23,11 @@ def es_positivo(numero):
     Función que recibe un dato de tipo numérico y devuelve True si
     es positivo y False si es negativo, en el caso que el dato sea
     0, devuelve positivo.
+
+    Si ingresa un tipo de dato no numérico devuelve None.
     """
+    if not es_numerico(numero):
+        return None
     if numero >= 0:
         return True
     return False
@@ -41,17 +45,16 @@ def ejercicio_a(base, altura):
     Devuelve un valor de tipo numérico.
 
     En caso de haber un error de tipo de variable, o que no se haya
-    ingresado, lo informará devolviendo una cadena especificando
-    el error."""
+    ingresado valor, lo informará devolviendo."""
     # Me fijo si la base o la altura es 0
     if (base == 0 or altura == 0):
-        return "Error, se ingreso un valor igual a 0, eso no es un cuadrado"
+        return None
     # Me fijo si son numéricos
     if not(es_numerico(base) or es_numerico(altura)):
-        return "Error, ingreso un tipo de dato no numérico."
+        return None
     # Me fijo si son negativos
     if not(es_positivo(base) or es_positivo(altura)):
-        return "Error, se ingreso número negativo."
+        return None
     return base * 2 + altura * 2
 
 
@@ -69,18 +72,17 @@ def ejercicio_b(base, altura):
     o float dependiendo el caso.
 
     En caso de haber un error de tipo de variable, o que no se haya
-    ingresado, lo informará devolviendo una cadena especificando
-    el error.
+    ingresado, lo informará devolviendo None
     """
     # Me fijo si la base o la altura es 0
     if (base == 0 or altura == 0):
-        return "Error, se ingreso un valor igual a 0, eso no es un cuadrado"
+        return None
     # Me fijo si son numéricos
     if not(es_numerico(base) or es_numerico(altura)):
-        return "Error, ingreso un tipo de dato no numérico."
+        return None
     # Me fijo si son negativos
     if not(es_positivo(base) or es_positivo(altura)):
-        return "Error, se ingreso número negativo."
+        return None
     return base * altura
 
 
@@ -111,8 +113,7 @@ def ejercicio_c(x1x,
     es de tipo numérico.
 
     En caso de haber un error de tipo de variable, o que no se haya
-    ingresado, lo informará devolviendo una cadena especificando
-    el error.
+    ingresado, lo informará devolviendo None.
     """
     def modulo_de(x):
         """Función que sirve para obtener el módulo o el valor real
@@ -124,25 +125,25 @@ def ejercicio_c(x1x,
         La función no imprime nada, sinó que devuelve un valor numérico
         que es igual al módulo del número ingresado.
 
-        Si ingresa un valor de tipo no numérico, se informará en una
-        cadena de texto.
+        Si ingresa un valor de tipo no numérico, lo informará devolviendo
+        None.
         """
         # Me fijo si es numérico
         if not es_numerico(x):
-            return "Error, ingreso un tipo de dato no numérico."
+            return None
         # Está todo ok
         if x < 0:
             x = -x
         return x
     # Me fijo si me dió un valor negativo.
-    valores = (x1x,x1y,x2x,x2y,x3x,x3y,x4x,x4y)
+    valores = (x1x, x1y, x2x, x2y, x3x, x3y, x4x, x4y)
     for punto in valores:
         if not es_numerico(punto):
-            return "Error, ingreso un tipo de dato no admitido"
+            return None
     # Esto no se si hacia falta pero lo hice para detectar si hay
     # algun error y no es un rectangulo
     if not x1x == x2x or not x1y == x4y or not x2y == x3y or not x3x == x4x:
-        return "Error, eso no es un rectangulo"
+        return None
     # Hago los cáculos necesarios para obtener la base y la altura teniendo
     # las x1, x2, x3, x4
     base = modulo_de(x1y - x2y)
@@ -157,14 +158,13 @@ def ejercicio_d(radio):
     La función recibe solo un parámetro y es el radio del
     círculo en cuestión, debe ser un dato de tipo numérico positivo.
 
-    Si se ingresa un valor no numérico o negativo se devolvera una cadena
-    informando el error"""
+    Si se ingresa un valor no numérico o negativo se devolvera None"""
     # Me fijo si es numérico
     if not es_numerico(radio):
-        return "Error, ingreso un tipo de dato no numérico."
+        return None
     # Me fijo si es negativo
     if not es_positivo(radio):
-        return "Error, se ingreso número negativo."
+        return None
     # Ta todo ok uso las ecuaciones de los círculos.
     area = PI * (radio ** 2)
     perimetro = 2 * PI * radio
@@ -181,14 +181,13 @@ def ejercicio_e(radio):
     La función no imprime nada, sino que devuelve un dato de tipo numérico que
     hace referencia al volumen de la esfera.
 
-    Si se ingresa un valor no numérico o negativo, se devolvera un string
-    informando lo ocurrido.
+    Si se ingresa un valor no numérico o negativo, se devolvera None.
     """
     # Me fijo si es numérico
     if not es_numerico(radio):
-        return "Error, ingresó un tipo de dato no numérico."
+        return None
     # Me fijo si es negativo
     if not es_positivo(radio):
-        return "Error, ingresó un número negativo."
+        return None
     # Ecuacion del volumen de las esferas = 4 / 3 * pi * r ** 3
     return 4 / 3 * PI * radio ** 3
