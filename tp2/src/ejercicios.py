@@ -13,6 +13,22 @@ def es_numerico(cosa):
     Función que recibe cualquier tipo de dato y devuelve True si es
     de tipo numérico y False si es de cualquier otro tipo de dato.
     """
+    if isinstance(cosa, int) or isinstance(cosa, float):
+        return True
+    else:
+        return False
+
+
+def es_positivo(numero):
+    """
+    Función que recibe un dato de tipo numérico y devuelve True si
+    es positivo y False si es negativo, en el caso que el dato sea
+    0, devuelve positivo.
+    """
+    if numero >= 0:
+        return True
+    else:
+        return False
 
 
 def ejercicio_a(base, altura):
