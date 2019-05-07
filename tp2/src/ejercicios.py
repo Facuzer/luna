@@ -1,8 +1,18 @@
+# -*- coding: utf-8 -*-
 import math
 
 # Hago una variable pi para poder usarla en todas las funciones
 # sin necesidad de declararla duplicadas veces.
 PI = math.pi
+
+
+# Las siguientes funciones son para comprobación de datos, que
+# se repite en todos los ejercicios.
+def es_numerico(cosa):
+    """
+    Función que recibe cualquier tipo de dato y devuelve True si es
+    de tipo numérico y False si es de cualquier otro tipo de dato.
+    """
 
 
 def ejercicio_a(base, altura):
@@ -20,7 +30,6 @@ def ejercicio_a(base, altura):
     ingresado, lo informará devolviendo una cadena especificando
     el error."""
     return base * 2 + altura * 2
-# print (EjercicioA(3,4))
 
 
 # Calcular area de un rectangulo dada su base y altura
@@ -43,7 +52,14 @@ def ejercicio_b(base, altura):
     return base * altura
 
 
-def ejercicio_c(x1x, x1y, x2x, x2y, x3x, x3y, x4x, x4y):
+def ejercicio_c(x1x,
+                x1y,
+                x2x,
+                x2y,
+                x3x,
+                x3y,
+                x4x,
+                x4y):
     """
     Función que sirve para obtener el área de un rectángulo dadas
     sus coordenadas en un sistema de ejes cartesianos(es decir pide
@@ -118,5 +134,5 @@ def ejercicio_e(radio):
     Si se ingresa un valor no numérico o negativo, se devolvera un string informando
     lo ocurrido.
     """
-    # Ecuacion = 4/3*pi*r**3
+    # Ecuacion del volumen de las esferas = 4 / 3 * pi * r ** 3
     return 4 / 3 * PI * radio ** 3
