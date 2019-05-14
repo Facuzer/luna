@@ -118,13 +118,40 @@ class Test_area_rectangulo(unittest.TestCase):
     def test_area_rectangulo_string(self):
         self.assertEqual(area_rectangulo("Hola", "Hola"), None)
         self.assertEqual(area_rectangulo("hola", 2), None)
-        self.assertEqual(area_rectangulo(2, "hola"))
+        self.assertEqual(area_rectangulo(2, "hola"), None)
         self.assertEqual(area_rectangulo("15", "30"), None)
 
     def test_area_rectangulo_neg(self):
         self.assertEqual(area_rectangulo(-15, -10), None)
         self.assertEqual(area_rectangulo(-15, 10), None)
         self.assertEqual(area_rectangulo(10, -15), None)
+
+    def test_area_rectangulo_cero(self):
+        self.assertEqual(area_rectangulo(0, 0), None)
+        self.assertEqual(area_rectangulo(10, 0), None)
+        self.assertEqual(area_rectangulo(0, 10), None)
+
+    def test_area_rectangulo_lista(self):
+        self.assertEqual(area_rectangulo([1, 2, 3], [4, 5, 6]), None)
+        self.assertEqual(area_rectangulo([1, 2, 3], 10), None)
+        self.assertEqual(area_rectangulo(1, [1, 2, 3]), None)
+
+    def test_area_rectangulo_tupla(self):
+        self.assertEqual(area_rectangulo((1, 2, 3), (4, 5, 6)), None)
+        self.assertEqual(area_rectangulo((1, 2, 3), 10), None)
+        self.assertEqual(area_rectangulo(1, (1, 2, 3)), None)
+
+    def test_area_rectangulo_int(self):
+        self.assertEqual(area_rectangulo(10, 10), 100)
+        self.assertEqual(area_rectangulo(123, 56), 6888)
+        self.assertEqual(area_rectangulo(25, 5), 125)
+        self.assertEqual(area_rectangulo(31, 1), 31)
+
+    def test_area_rectangulo_float(self):
+        self.assertEqual(area_rectangulo(1.25, 1.50), 1.875)
+        self.assertEqual(area_rectangulo(2.75, 1.1111), 3.055525)
+        self.assertEqual(area_rectangulo(1.6236372, 2.377373), 3.8599912410756)
+        self.assertEqual(area_rectangulo(0.0001, 0.0002), 0.00000002)
 
 
 class Test_area_rectangulo_coord(unittest.TestCase):

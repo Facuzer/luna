@@ -58,12 +58,11 @@ def perimetro_rectangulo(base, altura):
     return base * 2 + altura * 2
 
 
-# Calcular area de un rectangulo dada su base y altura
 def area_rectangulo(base, altura):
     """Función que sirve para calcular el área de un rectángulo dadas
     su base y su altura.
 
-    En los parámetros se debe ingresador dos valores de tipo numéricos
+    En los parámetros se debe ingresar dos valores de tipo numéricos
     positivos, uno que hace referencia a la base y el otro que hace
     referencia a la altura.
 
@@ -75,25 +74,26 @@ def area_rectangulo(base, altura):
     ingresado, lo informará devolviendo None
     """
     # Me fijo si la base o la altura es 0
-    if (base == 0 or altura == 0):
+    if base == 0 or altura == 0:
         return None
     # Me fijo si son numéricos
-    if not(es_numerico(base) or es_numerico(altura)):
+    if not es_numerico(base) or not es_numerico(altura):
         return None
     # Me fijo si son negativos
-    if not(es_positivo(base) or es_positivo(altura)):
+    if not es_positivo(base) or not es_positivo(altura):
         return None
-    return base * altura
+    area = base * altura
+    return area
 
 
 def area_rectangulo_coord(x1x,
-                x1y,
-                x2x,
-                x2y,
-                x3x,
-                x3y,
-                x4x,
-                x4y):
+                          x1y,
+                          x2x,
+                          x2y,
+                          x3x,
+                          x3y,
+                          x4x,
+                          x4y):
     """
     Función que sirve para obtener el área de un rectángulo dadas
     sus coordenadas en un sistema de ejes cartesianos(es decir pide
