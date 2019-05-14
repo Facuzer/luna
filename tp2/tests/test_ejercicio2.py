@@ -7,32 +7,31 @@ from src.ejercicios import *  # noqa
 
 # Empiezo con las funciones auxiliares que cree yo.
 class Test_es_numerico(unittest.TestCase):
-    def test_es_numerico(self):
-        def test_es_numerico_string(self):
-            # Con string?
-            self.assertEqual(es_numerico("Hola fede"), False)
-            self.assertEqual(es_numerico(""), False)
-            self.assertEqual(es_numerico("1234"), False)
+    def test_es_numerico_string(self):
+        # Con string?
+        self.assertEqual(es_numerico("Hola fede"), False)
+        self.assertEqual(es_numerico(""), False)
+        self.assertEqual(es_numerico("1234"), False)
 
-        def test_es_numerico_lista(self):
-            # Con una lista?
-            self.assertEqual(es_numerico(["no", "soy", "un", "numero"]), False)
-            self.assertEqual(es_numerico([1, 2, 3]), False)
+    def test_es_numerico_lista(self):
+        # Con una lista?
+        self.assertEqual(es_numerico(["no", "soy", "un", "numero"]), False)
+        self.assertEqual(es_numerico([1, 2, 3]), False)
 
-        def test_es_numerico_tupla(self):
-            # Con una tupla?
-            self.assertEqual(es_numerico(("soy", "una", "tupla")), False)
-            self.assertEqual(es_numerico((1, 2, 3)), False)
+    def test_es_numerico_tupla(self):
+        # Con una tupla?
+        self.assertEqual(es_numerico(("soy", "una", "tupla")), False)
+        self.assertEqual(es_numerico((1, 2, 3)), False)
 
-        def test_es_numerico_int(self):
-            # Con int's
-            self.assertEqual(es_numerico(5), True)
-            self.assertEqual(es_numerico(12387283), True)
+    def test_es_numerico_int(self):
+        # Con int's
+        self.assertEqual(es_numerico(5), True)
+        self.assertEqual(es_numerico(12387283), True)
 
-        def test_es_numerico_float(self):
-            # Con float's
-            self.assertEqual(es_numerico(1.111111), True)
-            self.assertEqual(es_numerico(2326723.27637263723), True)
+    def test_es_numerico_float(self):
+        # Con float's
+        self.assertEqual(es_numerico(1.111111), True)
+        self.assertEqual(es_numerico(2326723.27637263723), True)
 
 
 class Test_es_positivo(unittest.TestCase):
@@ -61,8 +60,8 @@ class Test_es_positivo(unittest.TestCase):
         # Con int's
         self.assertEqual(es_positivo(5), True)
         self.assertEqual(es_positivo(-5), False)
-        self.asserEqual(es_positivo(1283128738912), True)
-        self.asserEqual(es_positivo(-2312312312), False)
+        self.assertEqual(es_positivo(1283128738912), True)
+        self.assertEqual(es_positivo(-2312312312), False)
         self.assertEqual(es_positivo(0), True)
 
     def test_es_positivo_float(self):
@@ -70,7 +69,7 @@ class Test_es_positivo(unittest.TestCase):
         self.assertEqual(es_positivo(1.111111), True)
         self.assertEqual(es_positivo(2326723.27637263723), True)
         self.assertEqual(es_positivo(-1231283.28378273872), False)
-        self.assertEqual(es_positivo(-1.11111111), True)
+        self.assertEqual(es_positivo(-1.11111111), False)
         self.assertEqual(es_positivo(0.000000001), True)
         self.assertEqual(es_positivo(-0.000000001), False)
 
@@ -116,10 +115,16 @@ class Test_perimetro_rectangulo(unittest.TestCase):
 
 
 class Test_area_rectangulo(unittest.TestCase):
-    def test_area_rectangulo(self):
-        def test_area_rectangulo_string(self):
-            
-        
+    def test_area_rectangulo_string(self):
+        self.assertEqual(area_rectangulo("Hola", "Hola"), None)
+        self.assertEqual(area_rectangulo("hola", 2), None)
+        self.assertEqual(area_rectangulo(2, "hola"))
+        self.assertEqual(area_rectangulo("15", "30"), None)
+
+    def test_area_rectangulo_neg(self):
+        self.assertEqual(area_rectangulo(-15, -10), None)
+        self.assertEqual(area_rectangulo(-15, 10), None)
+        self.assertEqual(area_rectangulo(10, -15), None)
 
 
 class Test_area_rectangulo_coord(unittest.TestCase):
