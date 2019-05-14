@@ -22,7 +22,7 @@ def es_positivo(numero):
     """
     Función que recibe un dato de tipo numérico y devuelve True si
     es positivo y False si es negativo, en el caso que el dato sea
-    0, devuelve positivo.
+    0, devuelve True.
 
     Si ingresa un tipo de dato no numérico devuelve None.
     """
@@ -33,7 +33,7 @@ def es_positivo(numero):
     return False
 
 
-def ejercicio_a(base, altura):
+def perimetro_rectangulo(base, altura):
     """Función que sirve para calcular el perímetro de un rectángulo
     dadas su base y su altura.
 
@@ -46,20 +46,20 @@ def ejercicio_a(base, altura):
 
     En caso de haber un error de tipo de variable, o que no se haya
     ingresado valor, lo informará devolviendo."""
+    # Me fijo si son numéricos
+    if not es_numerico(base) or not es_numerico(altura):
+        return None
     # Me fijo si la base o la altura es 0
     if (base == 0 or altura == 0):
         return None
-    # Me fijo si son numéricos
-    if not(es_numerico(base) or es_numerico(altura)):
-        return None
     # Me fijo si son negativos
-    if not(es_positivo(base) or es_positivo(altura)):
+    if not es_positivo(base) or not es_positivo(altura):
         return None
     return base * 2 + altura * 2
 
 
 # Calcular area de un rectangulo dada su base y altura
-def ejercicio_b(base, altura):
+def area_rectangulo(base, altura):
     """Función que sirve para calcular el área de un rectángulo dadas
     su base y su altura.
 
@@ -86,7 +86,7 @@ def ejercicio_b(base, altura):
     return base * altura
 
 
-def ejercicio_c(x1x,
+def area_rectangulo_coord(x1x,
                 x1y,
                 x2x,
                 x2y,
@@ -151,7 +151,7 @@ def ejercicio_c(x1x,
     return base * altura
 
 
-def ejercicio_d(radio):
+def area_y_perimetro_circulo(radio):
     """Función que sirve para calcular el área y el perímetro
     de un círculo dado su radio.
 
@@ -171,7 +171,7 @@ def ejercicio_d(radio):
     return area, perimetro
 
 
-def ejercicio_e(radio):
+def volumen_esfera(radio):
     """
     Función que sirve para obtener el volumen de una esfera dado su radio.
 
