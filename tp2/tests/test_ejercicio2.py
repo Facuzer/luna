@@ -3,10 +3,9 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.ejercicios import *  # noqa
-# Este es para probar las funciones auxiliareas que cree
-# como las de validación de datos.
 
 
+# Empiezo con las funciones auxiliares que cree yo.
 class Test_es_numerico(unittest.TestCase):
     def test_es_numerico(self):
         def test_es_numerico_string(self):
@@ -37,46 +36,46 @@ class Test_es_numerico(unittest.TestCase):
 
 
 class Test_es_positivo(unittest.TestCase):
-    def test_es_positivo(self):
-        def test_es_positivo_string(self):
-            # Con string?
-            self.assertEqual(es_positivo("Hola fede"), None)
-            self.assertEqual(es_positivo(""), None)
-            self.assertEqual(es_positivo("1234"), None)
-            self.assertEqual(es_positivo("-1234"), None)
+    def test_es_positivo_string(self):
+        # Con string?
+        self.assertEqual(es_positivo("Hola fede"), None)
+        self.assertEqual(es_positivo(""), None)
+        self.assertEqual(es_positivo("1234"), None)
+        self.assertEqual(es_positivo("-1234"), None)
 
-        def test_es_positivo_lista(self):
-            # Con una lista?
-            self.assertEqual(es_positivo(["1234"]), None)
-            self.assertEqual(es_positivo(["diez", "veinte", "dos", "tres"]), None)
-            self.assertEqual(es_positivo([1, 2, 3]), None)
-            self.assertEqual(es_positivo([-1, -2, -3]), None)
+    def test_es_positivo_lista(self):
+        # Con una lista?
+        self.assertEqual(es_positivo(["1234"]), None)
+        self.assertEqual(es_positivo(["diez", "veinte", "dos", "tres"]), None)
+        self.assertEqual(es_positivo([1, 2, 3]), None)
+        self.assertEqual(es_positivo([-1, -2, -3]), None)
 
-        def test_es_positivo_tupla(self):
-            # Con una tupla?
-            self.assertEqual(es_positivo(("1234", 1234)), None)
-            self.assertEqual(es_positivo(("diez", "veinte", "dos", "tres")), None)
-            self.assertEqual(es_positivo((1, 2, 3)), None)
-            self.assertEqual(es_positivo((-1, -2, -3)), None)
+    def test_es_positivo_tupla(self):
+        # Con una tupla?
+        self.assertEqual(es_positivo(("1234", 1234)), None)
+        self.assertEqual(es_positivo(("diez", "veinte", "dos", "tres")), None)
+        self.assertEqual(es_positivo((1, 2, 3)), None)
+        self.assertEqual(es_positivo((-1, -2, -3)), None)
 
-        def test_es_positivo_int(self):
-            # Con int's
-            self.assertEqual(es_positivo(5), True)
-            self.assertEqual(es_positivo(-5), False)
-            self.asserEqual(es_positivo(1283128738912), True)
-            self.asserEqual(es_positivo(-2312312312), False)
-            self.assertEqual(es_positivo(0), True)
+    def test_es_positivo_int(self):
+        # Con int's
+        self.assertEqual(es_positivo(5), True)
+        self.assertEqual(es_positivo(-5), False)
+        self.asserEqual(es_positivo(1283128738912), True)
+        self.asserEqual(es_positivo(-2312312312), False)
+        self.assertEqual(es_positivo(0), True)
 
-        def test_es_positivo_float(self):
-            # Con float's
-            self.assertEqual(es_positivo(1.111111), True)
-            self.assertEqual(es_positivo(2326723.27637263723), True)
-            self.assertEqual(es_positivo(-1231283.28378273872), False)
-            self.assertEqual(es_positivo(-1.11111111), True)
-            self.assertEqual(es_positivo(0.000000001), True)
-            self.assertEqual(es_positivo(-0.000000001), False)
+    def test_es_positivo_float(self):
+        # Con float's
+        self.assertEqual(es_positivo(1.111111), True)
+        self.assertEqual(es_positivo(2326723.27637263723), True)
+        self.assertEqual(es_positivo(-1231283.28378273872), False)
+        self.assertEqual(es_positivo(-1.11111111), True)
+        self.assertEqual(es_positivo(0.000000001), True)
+        self.assertEqual(es_positivo(-0.000000001), False)
 
 
+# Y aca ya van todas las del enunciado.
 class Test_perimetro_rectangulo(unittest.TestCase):
     def test_perimetro_rectangulo_string(self):
         # Si meto un string en un campo? si meto en los dos?
@@ -117,7 +116,10 @@ class Test_perimetro_rectangulo(unittest.TestCase):
 
 
 class Test_area_rectangulo(unittest.TestCase):
-    pass
+    def test_area_rectangulo(self):
+        def test_area_rectangulo_string(self):
+            
+        
 
 
 class Test_area_rectangulo_coord(unittest.TestCase):
