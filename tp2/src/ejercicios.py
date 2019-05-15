@@ -165,17 +165,21 @@ def area_y_perimetro_circulo(radio):
     La función recibe solo un parámetro y es el radio del
     círculo en cuestión, debe ser un dato de tipo numérico positivo.
 
-    Si se ingresa un valor no numérico o negativo se devolvera None"""
+    Si se ingresa un valor no numérico, negativo, o que valga 0
+    se devolvera None"""
     # Me fijo si es numérico
     if not es_numerico(radio):
         return None
     # Me fijo si es negativo
     if not es_positivo(radio):
         return None
+    # Me fijo si me dieron radio que sea 0
+    if radio == 0:
+        return None
     # Ta todo ok uso las ecuaciones de los círculos.
     area = PI * (radio ** 2)
     perimetro = 2 * PI * radio
-    return area, perimetro
+    return (area, perimetro)
 
 
 def volumen_esfera(radio):
@@ -188,13 +192,16 @@ def volumen_esfera(radio):
     La función no imprime nada, sino que devuelve un dato de tipo numérico que
     hace referencia al volumen de la esfera.
 
-    Si se ingresa un valor no numérico o negativo, se devolvera None.
+    Si se ingresa un valor no numérico, negativo, o igual a 0 se devolvera None.
     """
     # Me fijo si es numérico
     if not es_numerico(radio):
         return None
     # Me fijo si es negativo
     if not es_positivo(radio):
+        return None
+    # Me fijo si es 0
+    if radio == 0:
         return None
     # Ecuacion del volumen de las esferas = 4 / 3 * pi * r ** 3
     return 4 / 3 * PI * radio ** 3

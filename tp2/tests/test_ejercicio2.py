@@ -246,11 +246,67 @@ class Test_area_rectangulo_coord(unittest.TestCase):
 
 
 class Test_area_y_perimetro_circulo(unittest.TestCase):
-    pass
+    def test_area_y_perimetro_circulo_string(self):
+        self.assertEqual(area_y_perimetro_circulo("Hola fede"), None)
+        self.assertEqual(area_y_perimetro_circulo("10"), None)
+        self.assertEqual(area_y_perimetro_circulo(""), None)
+
+    def test_area_y_perimetro_circulo_lista(self):
+        self.assertEqual(area_y_perimetro_circulo([1, 2, 3, 4]), None)
+        self.assertEqual(area_y_perimetro_circulo([1]), None)
+
+    def test_area_y_perimetro_circulo_tupla(self):
+        self.assertEqual(area_y_perimetro_circulo((1, 2, 3, 4)), None)
+
+    def test_area_y_perimetro_circulo_neg(self):
+        self.assertEqual(area_y_perimetro_circulo(-10), None)
+        self.assertEqual(area_y_perimetro_circulo(-0.00000001), None)
+
+    def test_area_y_perimetro_circulo_cero(self):
+        self.assertEqual(area_y_perimetro_circulo(0), None)
+
+    def test_area_y_perimetro_circulo_int(self):
+        self.assertEqual(area_y_perimetro_circulo(1),
+                         (3.141592653589793, 6.283185307179586))
+        self.assertEqual(area_y_perimetro_circulo(10),
+                         (314.1592653589793, 62.83185307179586))
+        self.assertEqual(area_y_perimetro_circulo(3232),
+                         (32816523.939091947, 20307.254912804423))
+        self.assertEqual(area_y_perimetro_circulo(878787),
+                         (2426147050057.681, 5521581.5665404275))
+
+    def test_area_y_perimetro_circulo_float(self):
+        self.assertEqual(area_y_perimetro_circulo(0.1),
+                         (0.031415926535897934, 0.6283185307179586))
+        self.assertEqual(area_y_perimetro_circulo(1.78273872),
+                         (9.984475763194439, 11.201277732044142))
+        self.assertEqual(area_y_perimetro_circulo(10.1),
+                         (320.4738665926948, 63.46017160251382))
+        self.assertEqual(area_y_perimetro_circulo(20.2),
+                         (1281.895466370779, 126.92034320502763))
 
 
 class Test_volumen_esfera(unittest.TestCase):
-    pass
+    def test_volumen_esfera_string(self):
+        pass
+
+    def test_volumen_esfera_lista(self):
+        pass
+
+    def test_volumen_esfera_tupla(self):
+        pass
+
+    def test_volumen_esfera_neg(self):
+        pass
+
+    def test_volumen_esfera_cero(self):
+        pass
+
+    def test_volumen_esfera_int(self):
+        pass
+
+    def test_volumen_esfera_float(self):
+        pass
 
 
 unittest.main()
