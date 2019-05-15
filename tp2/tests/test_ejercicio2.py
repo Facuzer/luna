@@ -74,6 +74,28 @@ class Test_es_positivo(unittest.TestCase):
         self.assertEqual(es_positivo(-0.000000001), False)
 
 
+class Test_modulo_de(unittest.TestCase):
+    def test_modulo_de_string(self):
+        self.assertEqual(modulo_de("Hola"), None)
+
+    def test_modulo_de_positivo(self):
+        self.assertEqual(modulo_de(10), 10)
+        self.assertEqual(modulo_de(0.000001), 0.000001)
+        self.assertEqual(modulo_de(1000), 1000)
+        self.assertEqual(modulo_de(474747474), 474747474)
+        self.assertEqual(modulo_de(0.2), 0.2)
+
+    def test_modulo_de_negativo(self):
+        self.assertEqual(modulo_de(-10), 10)
+        self.assertEqual(modulo_de(-0.000001), 0.000001)
+        self.assertEqual(modulo_de(-1000), 1000)
+        self.assertEqual(modulo_de(-474747474), 474747474)
+        self.assertEqual(modulo_de(-0.2), 0.2)
+
+    def test_modulo_de_cero(self):
+        self.assertEqual(modulo_de(0), 0)
+
+
 # Y aca ya van todas las del enunciado.
 class Test_perimetro_rectangulo(unittest.TestCase):
     def test_perimetro_rectangulo_string(self):
@@ -288,25 +310,43 @@ class Test_area_y_perimetro_circulo(unittest.TestCase):
 
 class Test_volumen_esfera(unittest.TestCase):
     def test_volumen_esfera_string(self):
-        pass
+        self.assertEqual(volumen_esfera("10"), None)
+        self.assertEqual(volumen_esfera("Hola fede"), None)
+        self.assertEqual(volumen_esfera(""), None)
 
     def test_volumen_esfera_lista(self):
-        pass
+        self.assertEqual(volumen_esfera([1, 2, 3, 4]), None)
+        self.assertEqual(volumen_esfera([1]), None)
 
     def test_volumen_esfera_tupla(self):
-        pass
+        self.assertEqual(volumen_esfera((1, 2, 3, 4)), None)
 
     def test_volumen_esfera_neg(self):
-        pass
+        self.assertEqual(volumen_esfera(-10), None)
+        self.assertEqual(volumen_esfera(-0.00000001), None)
 
     def test_volumen_esfera_cero(self):
-        pass
+        self.assertEqual(volumen_esfera(0), None)
 
     def test_volumen_esfera_int(self):
-        pass
+        self.assertEqual(volumen_esfera(1),
+                         4.1887902047863905)
+        self.assertEqual(volumen_esfera(10),
+                         4188.790204786391)
+        self.assertEqual(volumen_esfera(3232),
+                         141417340494.86023)
+        self.assertEqual(volumen_esfera(8787),
+                         2841911101314.909)
 
     def test_volumen_esfera_float(self):
-        pass
+        self.assertEqual(volumen_esfera(0.1),
+                         0.004188790204786391)
+        self.assertEqual(volumen_esfera(1.78273872),
+                         23.7329487225977)
+        self.assertEqual(volumen_esfera(10.1),
+                         4315.714736781622)
+        self.assertEqual(volumen_esfera(20.2),
+                         34525.71789425298)
 
 
 unittest.main()

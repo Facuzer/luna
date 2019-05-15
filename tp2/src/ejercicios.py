@@ -33,6 +33,28 @@ def es_positivo(numero):
     return False
 
 
+def modulo_de(x):
+    """Función que sirve para obtener el módulo o el valor real
+    de un número.
+
+    La función solo recibe un parámetro y debe ser un valor numérico,
+    y debe ser el número que se quiere obtener el módulo.
+
+    La función no imprime nada, sinó que devuelve un valor numérico
+    que es igual al módulo del número ingresado.
+
+    Si ingresa un valor de tipo no numérico, lo informará devolviendo
+    None.
+    """
+    # Me fijo si es numérico
+    if not es_numerico(x):
+        return None
+    # Está todo ok
+    if x < 0:
+        x = -x
+    return x
+
+
 def perimetro_rectangulo(base, altura):
     """Función que sirve para calcular el perímetro de un rectángulo
     dadas su base y su altura.
@@ -115,26 +137,6 @@ def area_rectangulo_coord(x1x,
     En caso de haber un error de tipo de variable, o que no se haya
     ingresado, lo informará devolviendo None.
     """
-    def modulo_de(x):
-        """Función que sirve para obtener el módulo o el valor real
-        de un número.
-
-        La función solo recibe un parámetro y debe ser un valor numérico,
-        y debe ser el número que se quiere obtener el módulo.
-
-        La función no imprime nada, sinó que devuelve un valor numérico
-        que es igual al módulo del número ingresado.
-
-        Si ingresa un valor de tipo no numérico, lo informará devolviendo
-        None.
-        """
-        # Me fijo si es numérico
-        if not es_numerico(x):
-            return None
-        # Está todo ok
-        if x < 0:
-            x = -x
-        return x
     # Me fijo si me dió un valor negativo.
     valores = (x1x, x1y, x2x, x2y, x3x, x3y, x4x, x4y)
     for punto in valores:
