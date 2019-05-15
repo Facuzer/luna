@@ -155,7 +155,94 @@ class Test_area_rectangulo(unittest.TestCase):
 
 
 class Test_area_rectangulo_coord(unittest.TestCase):
-    pass
+    def test_area_rectangulo_coord_string(self):
+        self.assertEqual(area_rectangulo_coord("1", "2", "3", "4",
+                                               "5", "6", "7", "8"), None)
+        self.assertEqual(area_rectangulo_coord(1, 2, "3", "4",
+                                               "5", "6", "7", "8"), None)
+        self.assertEqual(area_rectangulo_coord("1", "2", 3, 4,
+                                               "5", "6", "7", "8"), None)
+        self.assertEqual(area_rectangulo_coord("1", "2", "3", "4",
+                                               5, 6, "7", "8"), None)
+        self.assertEqual(area_rectangulo_coord("1", "2", "3", "4",
+                                               "5", "6", 7, 8), None)
+
+    def test_area_rectangulo_coord_lista(self):
+        self.assertEqual(area_rectangulo_coord([1, 2], [3, 4],
+                                               [5, 6], [7, 8],
+                                               [7, 8], [9, 10],
+                                               [10, 11], [12, 13]), None)
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               [5, 6], [7, 8],
+                                               [7, 8], [9, 10],
+                                               [10, 11], [12, 13]), None)
+        self.assertEqual(area_rectangulo_coord([1, 2], [3, 4],
+                                               3, 4,
+                                               [7, 8], [9, 10],
+                                               [10, 11], [12, 13]), None)
+        self.assertEqual(area_rectangulo_coord([1, 2], [3, 4],
+                                               [5, 6], [7, 8],
+                                               5, 6,
+                                               [10, 11], [12, 13]), None)
+        self.assertEqual(area_rectangulo_coord([1, 2], [3, 4],
+                                               [5, 6], [7, 8],
+                                               [7, 8], [9, 10],
+                                               7, 8), None)
+
+    def test_area_rectangulo_coord_tupla(self):
+        self.assertEqual(area_rectangulo_coord((1, 2), (3, 4),
+                                               (5, 6), (7, 8),
+                                               (7, 8), (9, 10),
+                                               (10, 11), (12, 13)), None)
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               (5, 6), (7, 8),
+                                               (7, 8), (9, 10),
+                                               (10, 11), (12, 13)), None)
+        self.assertEqual(area_rectangulo_coord((1, 2), (3, 4),
+                                               3, 4,
+                                               (7, 8), (9, 10),
+                                               (10, 11), (12, 13)), None)
+        self.assertEqual(area_rectangulo_coord((1, 2), (3, 4),
+                                               (5, 6), (7, 8),
+                                               5, 6,
+                                               (10, 11), (12, 13)), None)
+        self.assertEqual(area_rectangulo_coord((1, 2), (3, 4),
+                                               (5, 6), (7, 8),
+                                               (7, 8), (9, 10),
+                                               7, 8), None)
+
+    def test_area_rectangulo_coord_no_dar_rectangulo(self):
+        # Le doy algo que no es un rectángulo
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               4, 10,
+                                               5, 6,
+                                               7, 8), None)
+        # Le doy puntos iguales
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               1, 2,
+                                               5, 6,
+                                               5, 2), None)
+        # Le doy todos los puntos iguales
+        self.assertEqual(area_rectangulo_coord(0, 0,
+                                               0, 0,
+                                               0, 0,
+                                               0, 0), None)
+
+    def test_area_rectangulo_coord_int(self):
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               1, 6,
+                                               5, 6,
+                                               5, 2), 16)
+        self.assertEqual(area_rectangulo_coord(1, 2,
+                                               1, 100,
+                                               5, 100,
+                                               5, 2), 392)
+
+    def test_area_rectangulo_coord_float(self):
+        self.assertEqual(area_rectangulo_coord(1.5, 1.5,
+                                               1.5, 4,
+                                               5.5, 4,
+                                               5.5, 1.5), 10)
 
 
 class Test_area_y_perimetro_circulo(unittest.TestCase):

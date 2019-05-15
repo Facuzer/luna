@@ -142,6 +142,13 @@ def area_rectangulo_coord(x1x,
             return None
     # Esto no se si hacia falta pero lo hice para detectar si hay
     # algun error y no es un rectangulo
+    p1 = (x1x, x1y)
+    p2 = (x2x, x2y)
+    p3 = (x3x, x3y)
+    p4 = (x4x, x4y)
+    # Me fijo si algun punto es igual a otro
+    if p1 == p2 or p1 == p3 or p1 == p4 or p2 == p3 or p2 == p4 or p3 == p4:
+        return None
     if not x1x == x2x or not x1y == x4y or not x2y == x3y or not x3x == x4x:
         return None
     # Hago los cáculos necesarios para obtener la base y la altura teniendo
