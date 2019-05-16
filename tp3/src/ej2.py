@@ -27,6 +27,7 @@ def calcular_fichas_domino():
         return fichas_domino
 
 
+# fede me dijo que no testee esta.
 def imprimir_ficha_domino(numero_1, numero_2):
     print(" ---------------- ")
     print("|   {}   |   {}   |".format(numero_1, numero_2))
