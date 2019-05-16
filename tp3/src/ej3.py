@@ -16,7 +16,7 @@ def numeros_triangulares(n):
     if not isinstance(n, int):
         return None
     # Me fijo si me dió un valor negativo, y si es así salgo de la función.
-    if not(n >= 0):
+    if not(n > 0):
         return None
     # Variable que creo para almacenar los valores de los otros bucles
     # sumados.
@@ -33,7 +33,7 @@ def numeros_triangulares(n):
         # Le sumo a la variable el valor de i para poder luego imprimir en
         # pantalla en los próximos bucles.
         valores_anteriores += i
-    if __name__ == "__main__":
+    if not __name__ == "__main__":
         return lista_numeros_triangulares
 if __name__ == "__main__":
     # Creo una variable para saber si me dió bien el valor es decir si es
