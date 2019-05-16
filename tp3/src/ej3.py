@@ -35,6 +35,8 @@ def numeros_triangulares(n):
         valores_anteriores += i
     if not __name__ == "__main__":
         return lista_numeros_triangulares
+
+
 if __name__ == "__main__":
     # Creo una variable para saber si me dió bien el valor es decir si es
     # de tipo int
