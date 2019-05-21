@@ -1,7 +1,7 @@
 import math
 
 
-def obtenerVertice(a, b, c):
+def obtener_vertice(a, b, c):
     """Función que se utiliza para obtener el vértice(es decir, el máximo o mínimo)
     de una función cuadrática.
 
@@ -22,37 +22,39 @@ def obtenerVertice(a, b, c):
     # Me fijo si a es 0
     if a == 0:
         # Si a es 0 entonces que devuelva error.
-        return("Error. La función ingresada no es una función cuadrática.")
+        return None
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [a, b, c]:
         if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
-            return("Error. Ha ingresado tipos de datos no admitidos.")
+            return None
 
     # Calculo el valor de x y de y del vértice. El nombre xV y yV hacen
     # referencia a vértice en x y vértice en y.
     # Para calcular xV uso la fórmula matemática.
-    xV = (-b) / (2 * a)
+    x_v = (-b) / (2 * a)
     # Para calcular yV solo reemplazo el valor de xV en la función.
-    yV = (a * xV)**2 + b * xV + c
+    y_v = (a * x_v)**2 + b * x_v + c
     # Me fijo si puedo pasar estos números a int sin cambiar el valor.
-    if xV % 1 == 0:
-        xV = int(xV)
-    if yV % 1 == 0:
-        yV = int(yV)
+    if x_v % 1 == 0:
+        x_v = int(x_v)
+    if y_v % 1 == 0:
+        y_v = int(y_v)
     # Hago una variable para guardar si la función tiene un mínimo o un
     # máximo, me doy cuenta de esto sabiendo si el valor de a en la función es
     # negativo o positivo.
-    queEs = ""
+    que_es = ""
     if a > 0:
-        queEs = "mínimo"
+        que_es = "mínimo"
     else:
-        queEs = "máximo"
+        que_es = "máximo"
     # Devuelvo un string diciendo los valores del máximo/mínimo y
     # especificando qué es.
-    return ("Hay un {} en ({},{})".format(queEs, xV, yV))
-
+    if __name__ == "__main__":
+        return ("Hay un {} en ({},{})".format(que_es, x_v, y_v))
+    else:
+        return(que_es, (x_v, y_v))
 
 def raiz(a, b, c):
     """Función que se utiliza para obtener una raíz de una función cuadrática.
@@ -87,15 +89,15 @@ def raiz(a, b, c):
     imaginario = ""
     # Me fijo si se pueden hacer las operaciones y si se puede lo hago
     try:
-        loQueVaEnLaRaiz = b**2 - 4 * a * c
-        x1 = (-b + math.sqrt(loQueVaEnLaRaiz)) / (2 * a)
-        x2 = (-b - math.sqrt(loQueVaEnLaRaiz)) / (2 * a)
+        lo_que_va_en_la_raiz = b**2 - 4 * a * c
+        x1 = (-b + math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
+        x2 = (-b - math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
     except BaseException:
         # Si no se pueden hacer las operaciones, esto quiere decir que no hay
         # raíces reales, entonces en tal caso empiezo a calcular la raiz
         # compleja.
-        x1 = (-b + math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
-        x2 = (-b - math.sqrt(-loQueVaEnLaRaiz)) / (2 * a)
+        x1 = (-b + math.sqrt(-lo_que_va_en_la_raiz)) / (2 * a)
+        x2 = (-b - math.sqrt(-lo_que_va_en_la_raiz)) / (2 * a)
         # Seteo la variable de los complejos con una i para saber que
         # tengo que agregarle la i al final ya que el resultado es
         # complejo.
@@ -117,8 +119,8 @@ def raiz(a, b, c):
         return x1
 
 
-def interseccionEntreRectas(pendiente1, ordenadaOrigen1, 
-                            pendiente2, ordenadaOrigen2):
+def interseccion_entre_rectas(pendiente1, ordenada_origen1, 
+                            pendiente2, ordenada_origen2):
     """Función que se utiliza para obtener la intersección entre dos rectas dadas
     sus pendientes y sus ordenadas de origen.
 
@@ -140,7 +142,7 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1,
     Si se ingresan datos no admitidos devolvería un error informando lo
     ocurrido."""
     # Recorro los numeros para saber si son de tipo numérico.
-    for numeros in [pendiente1, ordenadaOrigen1, pendiente2, ordenadaOrigen2]:
+    for numeros in [pendiente1, ordenada_origen1, pendiente2, ordenada_origen2]:
         if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
@@ -150,7 +152,7 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1,
     if pendiente1 == pendiente2:
         # Me fijo si las ordenadas de origen son iguales para saber si es la
         # misma función.
-        if ordenadaOrigen1 == ordenadaOrigen2:
+        if ordenada_origen1 == ordenada_origen2:
             # Devuelvo el error especificando cuál fue.
             return "Las funciones que se ingresaron son iguales, es decir que \
                 hay una interseccion indefinida."
@@ -161,7 +163,7 @@ def interseccionEntreRectas(pendiente1, ordenadaOrigen1,
     # Creo una variable intersección y le asigno el valor de la
     # intersección, este valor queda definido igualando las dos funciones y
     # pasando un valor para el otro lado.
-    interseccion = -(ordenadaOrigen2 - ordenadaOrigen1) / (pendiente2 - pendiente1)
+    interseccion = -(ordenada_origen2 - ordenada_origen1) / (pendiente2 - pendiente1)
     if interseccion % 1 == 0:  # Intento ver si puedo pasar el resultado a int.
         interseccion = int(interseccion)  # Si se puede lo paso.
     
