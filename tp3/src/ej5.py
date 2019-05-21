@@ -1,10 +1,10 @@
-def matrizIdentidad(n):
+def matriz_identidad(n):
     """Función que se utiliza para imprimir una matriz identidad del volumen
     especificado.
 
     El parámetro n indica el volumen de la matriz y debe ser un número de tipo
-    int positivo entre 1 y 50, de caso contrario imprime un string informando
-    el error. Las cotas especificadas anteriormente son debido a que si
+    int positivo entre 1 y 50, de caso contrario devuelve None.
+    Las cotas especificadas anteriormente son debido a que si
     el número ingresado fuese mayor, no entraría en la pantalla de la terminal.
 
     La función no devuelve ningún valor, sino que imprime en pantalla la
@@ -12,22 +12,18 @@ def matrizIdentidad(n):
     # Me fijo si el valor dado es de tipo int, caso contrario informo que se
     # cometió un error
     if not isinstance(n, int):
-        print("Ingresó un tipo de variable no soportado. ",
-              "Ingrese un número de tipo int.")
-        return
+        return None
     # Me fijo si me dió un valor negativo, si es asi lo informo.
     if not n > 0:
-        print("Ingresó un tipo de numero no soportado. ",
-              "Ingrese un número mayor que 0")
-        return
+        return None
     # Me fijo si me dió un valor fuera de las cotas.
     if not n >= 50:
-        print("Ingreso un valor fuera de las cotas(1-50)")
+        return None
     # Creo dos variables para saber: si ya puse el 1 y qué lugar debe ocupar
     # el 1 en la próxima iteración del bloque for.
     # Seteo en 0 la variable para que cuando empiezen las iteraciones, el
     # primer 1 este en la primera posición
-    ultimoUno = 0
+    ultimo_uno = 0
     # La siguiente variable es para saber si en toda la iteración del segundo
     # bloque ya puse un uno o no.
     listo = False
@@ -37,7 +33,7 @@ def matrizIdentidad(n):
         for j in range(0, n):
             # Comparo si la iteración del bloque corresponde a la misma en la
             # que tengo que poner el 1, y si ya lo puse antes o no.
-            if ultimoUno == j and not listo:
+            if ultimo_uno == j and not listo:
                 # Si se cumplen las condiciones que imprima un 1 en vez de un 0
                 # con el final " " así no se pasa a la próxima línea.
                 print("1", end="  ")
@@ -45,7 +41,7 @@ def matrizIdentidad(n):
                 listo = True
                 # Sumo a la variable 1 para saber, en el próximo ciclo, en qué
                 # posición poner el uno.
-                ultimoUno += 1
+                ultimo_uno += 1
             else:
                 # Si no hay que poner un uno, pongo un cero con un final " "
                 # para que no salte de linea
@@ -57,4 +53,4 @@ def matrizIdentidad(n):
         print("\n")
 
 
-# matrizIdentidad(10)
+# matriz_identidad(10)
