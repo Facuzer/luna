@@ -31,12 +31,12 @@ class Test_calcular_fichas_domino(unittest.TestCase):
         self.assertIn((5, 4), lista_fichas_domino)
         self.assertIn((5, 5), lista_fichas_domino)
         self.assertIn((6, 0), lista_fichas_domino)
-        self.assertIn((6, 6), lista_fichas_domino)
         self.assertIn((6, 1), lista_fichas_domino)
         self.assertIn((6, 2), lista_fichas_domino)
         self.assertIn((6, 3), lista_fichas_domino)
         self.assertIn((6, 4), lista_fichas_domino)
         self.assertIn((6, 5), lista_fichas_domino)
+        self.assertIn((6, 6), lista_fichas_domino)
 
 
 unittest.main()
