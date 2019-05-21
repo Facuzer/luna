@@ -17,8 +17,10 @@ def matriz_identidad(n):
     if not n > 0:
         return None
     # Me fijo si me dió un valor fuera de las cotas.
-    if not n >= 50:
+    if n > 50:
         return None
+    # Creo lista para guardar la matriz
+    lista_matriz = []
     # Creo dos variables para saber: si ya puse el 1 y qué lugar debe ocupar
     # el 1 en la próxima iteración del bloque for.
     # Seteo en 0 la variable para que cuando empiezen las iteraciones, el
@@ -36,7 +38,10 @@ def matriz_identidad(n):
             if ultimo_uno == j and not listo:
                 # Si se cumplen las condiciones que imprima un 1 en vez de un 0
                 # con el final " " así no se pasa a la próxima línea.
-                print("1", end="  ")
+                if __name__ == "__main__":
+                    print("1", end="  ")
+                else:
+                    lista_matriz.append(1)
                 # Seteo el listo en True para saber que ya puse el 1.
                 listo = True
                 # Sumo a la variable 1 para saber, en el próximo ciclo, en qué
@@ -45,12 +50,18 @@ def matriz_identidad(n):
             else:
                 # Si no hay que poner un uno, pongo un cero con un final " "
                 # para que no salte de linea
-                print("0", end="  ")
+                if __name__ == "__main__":
+                    print("0", end="  ")
+                else:
+                    lista_matriz.append(0)
         # Seteo la variable listo en False para que en el próximo ciclo se
         # pueda comparar para saber si necesito poner el 1 o no.
         listo = False
         # Imprimo un salto de línea para que la matriz aparezca bien.
-        print("\n")
+        if __name__ == "__main__":
+            print("\n")
+        else:
+            lista_matriz.append("_")
+    return lista_matriz
 
-
-# matriz_identidad(10)
+matriz_identidad(5)
