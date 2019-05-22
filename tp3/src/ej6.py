@@ -14,7 +14,7 @@ def obtener_vertice(a, b, c):
 
     Si a es igual a 0 va a devolver uNone, ya que si a es 0, no sería una función
     cuadrática.
-    
+
     Si se ingresan datos de tipos no admitidos devolverá None.
 
     ejemplo de uso = obtenerVertice(1,1,2) siendo 1 = a,1 = b,2 = c
@@ -59,10 +59,9 @@ def obtener_vertice(a, b, c):
 def raiz(a, b, c):
     """Función que se utiliza para obtener una raíz de una función cuadrática.
 
-
-    La función recibe tres parámetros, que es a,b,c (los valores deben ser
-    numéricos) y cada uno hace referencia a los valores a,b,c en la siguiente
-    ecuacion de una función cuadratica: ax**2 + bx + c
+    La función recibe tres parámetros, que es a, b, c (los valores deben ser
+    numéricos) y cada uno hace referencia a los valores a, b, c en la siguiente
+    ecuación de una función cuadrática: ax**2 + bx + c
 
     Si existen dos raíces, la función devuelve los dos valores de la raíz
     en x, en caso contrario devuelve solo un valor en x. Si la raíz es una
@@ -70,20 +69,19 @@ def raiz(a, b, c):
 
     El parámetro a debe ser si o si distinto a 0, porque sinó no sería una
     función cuadrática. En caso de que se de un valor de a que sea 0, o
-    que se den valores de tipo no numérico se devolverá un string informando
-    el error.
+    que se den valores de tipo no numérico se devolverá None.
     """
 
     # Me fijo si a es 0
     if a == 0:
         # Si a es 0 entonces que devuelva error.
-        return("Error. La función ingresada no es una función cuadrática.")
+        return None
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [a, b, c]:
         if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
-            return("Error. Ha ingresado tipos de datos no admitidos.")
+            return None
     # Creo una variable im para guardar si tengo que agregarle la i de
     # los complejos o no
     imaginario = ""
@@ -92,7 +90,7 @@ def raiz(a, b, c):
         lo_que_va_en_la_raiz = b**2 - 4 * a * c
         x1 = (-b + math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
         x2 = (-b - math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
-    except BaseException:
+    except ZeroDivisionError:
         # Si no se pueden hacer las operaciones, esto quiere decir que no hay
         # raíces reales, entonces en tal caso empiezo a calcular la raiz
         # compleja.
@@ -107,16 +105,14 @@ def raiz(a, b, c):
         x1 = int(x1)
     if x2 % 1 == 0:
         x2 = int(x2)
-    if imaginario == "i":  # Si tengo que agregar la i la agrego.
+    if imaginario == "i":  # Si tengo que agregar la i de imaginario la agrego.
         x1 = str(x1) + imaginario
         x2 = str(x2) + imaginario
-    # Me fijo si hay un resultado o dos para dar
-    if x1 != x2:
+    if x1 != x2:  # Me fijo si hay un resultado o dos para dar
         # Si hay dos devuelvo 2
         return x1, x2
     else:
-        # Si hay uno devuelvo 1
-        return x1
+        return x1  # Si hay uno devuelvo 1
 
 
 def interseccion_entre_rectas(pendiente1, ordenada_origen1, 
