@@ -12,10 +12,10 @@ def obtener_vertice(a, b, c):
     Devuelve un string diciendo en qué valores se encuentra el vértice y
     diciendo si es un máximo o mínimo.
 
-    Si a es igual a 0 va a devolver una cadena informando que se ha cometido
-    un error, ya que si a es 0 no sería una función cuadrática.
-    Si se ingresan datos de tipos no admitidos devolverá un string informando
-    el error.
+    Si a es igual a 0 va a devolver uNone, ya que si a es 0, no sería una función
+    cuadrática.
+    
+    Si se ingresan datos de tipos no admitidos devolverá None.
 
     ejemplo de uso = obtenerVertice(1,1,2) siendo 1 = a,1 = b,2 = c
     en este ejemplo la función devolvería = "Hay un minimo en (-0.5,1.75)"  """
