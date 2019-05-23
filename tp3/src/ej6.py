@@ -143,6 +143,9 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return None
+    # Me fjo si los valores de las pendientes son igual a 0
+    if pendiente1 == 0 or pendiente2 == 0:
+        return None
     # Me fijo si los valores de las pendientes son iguales para ver si se
     # puede obtener la intersección o no.
     if pendiente1 == pendiente2:
@@ -154,6 +157,9 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
         else:
             # Devuelvo el error especificando cuál fue.
             return None
+
+    # Está todo ok
+    
     # Creo una variable intersección y le asigno el valor de la
     # intersección, este valor queda definido igualando las dos funciones y
     # pasando un valor para el otro lado.

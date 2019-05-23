@@ -117,7 +117,25 @@ class Test_raiz(unittest.TestCase):
 
 
 class Test_interseccion_entre_rectas(unittest.TestCase):
-    pass
+    def test_interseccion_entre_rectas_string(self):
+        pass
 
+    def test_interseccion_entre_rectas_lista(self):
+        pass
+
+    def test_interseccion_entre_rectas_tupla(self):
+        pass
+
+    def test_interseccion_entre_rectas_pendientes_cero(self):
+        pass
+
+    def test_interseccion_entre_rectas_pendientes_iguales(self):
+        pass
+
+    def test_interseccion_entre_rectas_int(self):
+        pass
+
+    def test_interseccion_entre_rectas_float(self):
+        pass
 
 unittest.main()
