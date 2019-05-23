@@ -44,8 +44,11 @@ def que_dia_es(dia_del_anio):
     # tupla.
     dia_del_anio = dias_en_letras[dia_del_anio]
     # Imprimo el día del año en pantalla.
-    print(dia_del_anio)
+    if __name__ == "__main__":
+        print(dia_del_anio)
+    else:
+        return dia_del_anio
 
 
-for i in range (1,367):
-    que_dia_es(i)
+# for i in range (1,367):
+#     que_dia_es(i)
