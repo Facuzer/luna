@@ -58,6 +58,7 @@ class Test_obtener_vertice(unittest.TestCase):
         self.assertEqual(obtener_vertice(-1.12736, 123, 1.5),
                          ("máximo", (54.55222821458984, 10493.674070394549)))
     
+    
 class Test_raiz(unittest.TestCase):
     def test_raiz(self):
         self.assertEqual(raiz("estos", "son", "numeros"), None)
@@ -118,24 +119,53 @@ class Test_raiz(unittest.TestCase):
 
 class Test_interseccion_entre_rectas(unittest.TestCase):
     def test_interseccion_entre_rectas_string(self):
-        pass
-
+        self.assertEqual(interseccion_entre_rectas(
+            "no", "soy", "mucho", "texto"), None)
+        self.assertEqual(interseccion_entre_rectas("1", "2", "3", "4"), None)
+        self.assertEqual(interseccion_entre_rectas(1, "2", "3", "4"), None)
+        self.assertEqual(interseccion_entre_rectas("1", 2, "3", "4"), None)
+        self.assertEqual(interseccion_entre_rectas("1", "2", 3, "4"), None)
+        self.assertEqual(interseccion_entre_rectas("1", "2", "3", 4), None)
+        self.assertEqual(interseccion_entre_rectas(1, 2, "3", "4"), None)
+        self.assertEqual(interseccion_entre_rectas(1, 2, 3, "4"), None)
+        
     def test_interseccion_entre_rectas_lista(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(
+                         [1, 2, 3], [1, 2], [1, 2], [1]), None)
 
     def test_interseccion_entre_rectas_tupla(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(
+                         (1, 2, 3), (1, 2), (1, 2), (1)), None)
 
     def test_interseccion_entre_rectas_pendientes_cero(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(0, 1, 0, 1), None)
+        self.assertEqual(interseccion_entre_rectas(1, 1, 0, 1), None)
+        self.assertEqual(interseccion_entre_rectas(0, 1, 1, 1), None)
+
 
     def test_interseccion_entre_rectas_pendientes_iguales(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(1, 5, 1, 123), None)
 
     def test_interseccion_entre_rectas_int(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(10, 1, 20, 5), -0.4)
+        self.assertEqual(interseccion_entre_rectas(1, 5, 20, 21),
+                         -0.8421052631578947)
+        self.assertEqual(interseccion_entre_rectas(-12, 5, -20, 4), -0.125)
+        self.assertEqual(interseccion_entre_rectas(-15, 13, -22, 12),
+                         -0.14285714285714285)
+        self.assertEqual(interseccion_entre_rectas(-123, 431, -23, 34), 3.97)
+
 
     def test_interseccion_entre_rectas_float(self):
-        pass
+        self.assertEqual(interseccion_entre_rectas(1.5, 2.4, 1.123, 1.18312),
+                         -3.2277984084880638)
+        self.assertEqual(interseccion_entre_rectas(3.123, 1.3, 2.5, 1.18237),
+                         -0.18881219903691826)
+        self.assertEqual(interseccion_entre_rectas(-4.123, -4.1231231235, 5.123, 
+                                                   9.123),
+                         -1.4326328275470472)
+        self.assertEqual(interseccion_entre_rectas(-42.237657233, -4-12837, 1.12736, 2912832), -67466.20171463036)
+        self.assertEqual(interseccion_entre_rectas(1.1273612763, 1.8913789273, 1.1287382, 2.12837), -172.1163436289339)
+
 
 unittest.main()
