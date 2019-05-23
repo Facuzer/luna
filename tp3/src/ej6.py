@@ -82,7 +82,7 @@ def raiz(a, b, c):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
             return None
-    # Creo una variable im para guardar si tengo que agregarle la i de
+    # Creo una variable imaginario para guardar si tengo que agregarle la i de
     # los complejos o no
     imaginario = ""
     # Me fijo si se pueden hacer las operaciones y si se puede lo hago
@@ -90,7 +90,7 @@ def raiz(a, b, c):
         lo_que_va_en_la_raiz = b**2 - 4 * a * c
         x1 = (-b + math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
         x2 = (-b - math.sqrt(lo_que_va_en_la_raiz)) / (2 * a)
-    except ZeroDivisionError:
+    except ValueError:
         # Si no se pueden hacer las operaciones, esto quiere decir que no hay
         # raíces reales, entonces en tal caso empiezo a calcular la raiz
         # compleja.
@@ -167,3 +167,5 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
 
 
 # print(obtenerVertice(1,0,4))
+
+print (raiz(10, 10, 10))

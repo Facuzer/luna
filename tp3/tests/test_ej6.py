@@ -59,7 +59,61 @@ class Test_obtener_vertice(unittest.TestCase):
                          ("máximo", (54.55222821458984, 10493.674070394549)))
     
 class Test_raiz(unittest.TestCase):
-    pass
+    def test_raiz(self):
+        self.assertEqual(raiz("estos", "son", "numeros"), None)
+        self.assertEqual(raiz("1", "2", "3"), None)
+        self.assertEqual(raiz(1, "2", "3"), None)
+        self.assertEqual(raiz("1", 2, "3"), None)
+        self.assertEqual(raiz("1", "2", 3), None)
+        self.assertEqual(raiz(1, 2, "3"), None)
+        self.assertEqual(raiz("1", 2, 3), None)
+        self.assertEqual(raiz("1", "2", "3"), None)
+        self.assertEqual(raiz("1", "2", "3"), None)
+
+    def test_raiz_lista(self):
+        self.assertEqual(raiz([1, 2, 3], [1, 2, 3], [1, 2, 3]), None)
+        self.assertEqual(raiz(1, [1, 2, 3], [1, 2, 3]), None)
+        self.assertEqual(raiz([1, 2, 3], 2, [1, 2, 3]), None)
+        self.assertEqual(raiz([1, 2, 3], [1, 2, 3], 3), None)
+
+
+    def test_raiz_tupla(self):
+        self.assertEqual(raiz((1, 2, 3), (1, 2, 3), (1, 2, 3)), None)
+        self.assertEqual(raiz(1, (1, 2, 3), (1, 2, 3)), None)
+        self.assertEqual(raiz((1, 2, 3), 2, (1, 2, 3)), None)
+        self.assertEqual(raiz((1, 2, 3), (1, 2, 3), 3), None)
+
+    def test_raiz_dar_a_cero(self):
+        self.assertEqual(raiz(0, 10, 10), None)
+        self.assertEqual(raiz(0, 283728, 120930912), None)
+    
+    def test_raiz_real(self):
+        # int's
+        self.assertEqual(raiz(1, 0, 0), 0)
+        self.assertEqual(raiz(12837, 123, -8923), 
+                         (0.8289495603087264, -0.8385312382708671))
+        self.assertEqual(raiz(928, 8, -876), 
+                         (0.9672780949522991, -0.9758987846074716))
+        self.assertEqual(raiz(-10, 15, 20),
+                         (-0.8507810593582121, 2.350781059358212))
+        # float's
+        self.assertEqual(raiz(10.5, -5.1, -10.25575),
+                         (1.2605593031549533, -0.7748450174406675))
+        self.assertEqual(raiz(3.5, -8.5, -1.5), 
+                         (2.5938005654162835, -0.16522913684485477))
+        self.assertEqual(raiz(-1.555, 10, 128.85),
+                              (-6.438619608003603, 12.869487775206176))
+        # cero
+        self.assertEqual(raiz(10, 0, 0), 0)
+        pass
+
+    def test_raiz_imaginaria(self):
+        self.assertEqual(raiz(10, 10, 10), 
+                         ('0.3660254037844387i', '-1.3660254037844388i'))
+        self.assertEqual(raiz(1.5, 2, 10.001),
+                         ('1.8279052182243838i', '-3.1612385515577173i'))
+        self.assertEqual(raiz(-15, 10, -15),
+                         ('-0.6094757082487301i', '1.2761423749153968i'))
 
 
 class Test_interseccion_entre_rectas(unittest.TestCase):
