@@ -141,7 +141,7 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
         if not(isinstance(numeros, int) or isinstance(numeros, float)):
             # Si hay alguno que no es de tipo numérico, entonces devuelvo
             # un error.
-            return("Error. Ha ingresado tipos de datos no admitidos.")
+            return None
     # Me fijo si los valores de las pendientes son iguales para ver si se
     # puede obtener la intersección o no.
     if pendiente1 == pendiente2:
@@ -149,12 +149,10 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
         # misma función.
         if ordenada_origen1 == ordenada_origen2:
             # Devuelvo el error especificando cuál fue.
-            return "Las funciones que se ingresaron son iguales, es decir que \
-                hay una interseccion indefinida."
+            return None
         else:
             # Devuelvo el error especificando cuál fue.
-            return "Las funciones ingresadas son paralelas, esto quiere decir\
-                que no existe intersección."
+            return None
     # Creo una variable intersección y le asigno el valor de la
     # intersección, este valor queda definido igualando las dos funciones y
     # pasando un valor para el otro lado.
