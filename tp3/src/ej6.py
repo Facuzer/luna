@@ -134,9 +134,8 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
     Si se dan dos pendientes iguales, no existíria nunca una intersección
     o(si las ordenadas de origen tambien son iguales) serían la misma función
     y tendrían una intersección indefinida.
-    En ambos casos se devolvería un string informando lo ocurrido.
-    Si se ingresan datos no admitidos devolvería un error informando lo
-    ocurrido."""
+    En ambos casos se devolvería None.
+    Si se ingresan datos no admitidos devolvería None."""
     # Recorro los numeros para saber si son de tipo numérico.
     for numeros in [pendiente1, ordenada_origen1, pendiente2, ordenada_origen2]:
         if not(isinstance(numeros, int) or isinstance(numeros, float)):
