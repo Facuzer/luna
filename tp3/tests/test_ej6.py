@@ -58,7 +58,7 @@ class Test_obtener_vertice(unittest.TestCase):
         self.assertEqual(obtener_vertice(-1.12736, 123, 1.5),
                          ("máximo", (54.55222821458984, 10493.674070394549)))
     
-    
+
 class Test_raiz(unittest.TestCase):
     def test_raiz(self):
         self.assertEqual(raiz("estos", "son", "numeros"), None)
