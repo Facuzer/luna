@@ -62,6 +62,8 @@ def matriz_identidad(n):
             print("\n")
         else:
             lista_matriz.append("_")
-    return lista_matriz
+    if not __name__ == "__main__":
+        return lista_matriz
 
 matriz_identidad(5)
+
