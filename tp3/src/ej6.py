@@ -125,7 +125,8 @@ def interseccion_entre_rectas(pendiente1, ordenada_origen1,
     ordenadaOrigen1 = hace referencia a la ordenada de origen de la primer recta.
     pendiente2 = hace referencia a la pendiente de la segunda recta.
     ordenadaOrigen2 = hace referencia a la ordenada de origen de la segunda recta.
-    Todos los parámetros deben de tipo entero o float.
+    Todos los parámetros deben de tipo entero o float y las pendientes deben ser
+    distintas que cero.
 
     La función devuelve el resultado en x de la intersección entre las dos
     rectas, el tipo de dato que devuelve puede ser int o float, dependiendo
