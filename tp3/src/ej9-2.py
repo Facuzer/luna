@@ -30,4 +30,4 @@ while sigo:  # hago un while para pedirlo hasta que me de un int.
         sigo = True
 # Llamo a la función que cree en el otro archivo. Le paso los parámetros
 # que anteriormente le pedí al profesor.
-ej9.evaluarExamenes(cantidadTotal, porcentajeAprobacion)
+ej9.evaluar_examenes(cantidadTotal, porcentajeAprobacion)
