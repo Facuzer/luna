@@ -16,7 +16,7 @@ def anio_en_numeros_romanos(anio):
         return None
     # Si no está en el rango 0 a 1 000 000 entonces lo informo y salgo de la
     # función
-    if not (anio >= 0 and anio <= 1000000):
+    if not (anio > 0 and anio <= 1000000):
         return None
     # Ta todo ok entonces sigo
 
