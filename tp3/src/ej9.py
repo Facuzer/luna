@@ -93,7 +93,8 @@ def calcular_porcentaje(cantidad_ejs_bien, cantidad_ejs):
     Función que sirve para calcular el porcentaje de una evaluación dado su
     cantidad de ejs totales y la cantidad de ejs bien hechos.
 
-    Los parámetros deben ser de tipo int. De lo contrario devuelve None. Existe
+    Los parámetros deben ser de tipo int. Y cantidad de ejs bien no debe ser 
+    mayor a cantidad_ejs. De lo contrario devuelve None. Existe
     una excepcion a esto y es que si se ingreso el valor centinela "*", devuelve
     el mismo valor para que pueda salir del while
 
@@ -105,6 +106,9 @@ def calcular_porcentaje(cantidad_ejs_bien, cantidad_ejs):
         return None
     if not isinstance(cantidad_ejs_bien, int):
         return None
+    if cantidad_ejs_bien > cantidad_ejs:
+        return None
+    
     return (int(cantidad_ejs_bien) * 100) / cantidad_ejs
 
 
@@ -112,11 +116,20 @@ def calcular_si_aprobo(porcentaje_aprobacion, porcentaje_alumno):
         """
         Función que sirve para determinar si una evaluación está aprobada
         o no dada su porcentaje necesario de aprobación y el porcentaje
-        del alumno correspondiente.
+        del alumno correspondiente, si el porcentaje del alumno no está entre
+        0-100, devuelve None.
 
         Se deben ingresar datos de tipo int o float, de lo contrario devuelve
         None.
         """
+        if not isinstance(porcentaje_aprobacion, (int, float)):
+            return None
+        if not isinstance(porcentaje_alumno, (int, float)):
+            return None
+        if not (porcentaje_alumno >=0 and porcentaje_alumno<=100):
+            return None
+        if not (porcentaje_aprobacion >=0 and porcentaje_aprobacion<=100):
+            return None
         if porcentaje_alumno >= porcentaje_aprobacion:
             return "Aprobó."
         else:
