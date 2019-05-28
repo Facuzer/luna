@@ -6,22 +6,22 @@ from src.ej1 import verificar_contraseña
 
 class Test_verificar_contraseña(unittest.TestCase):
     def test_verificar_contraseña_int(self):
-        self.assertEqual(verificar_contraseña(1), None)
-        self.assertEqual(verificar_contraseña(1000), None)
-        self.assertEqual(verificar_contraseña(12837283), None)
+        self.assertEqual(verificar_contraseña(1), TypeError)
+        self.assertEqual(verificar_contraseña(1000), TypeError)
+        self.assertEqual(verificar_contraseña(12837283), TypeError)
     
     def test_verificar_contraseña_float(self):
-        self.assertEqual(verificar_contraseña(1.12837), None)
-        self.assertEqual(verificar_contraseña(1000.128), None)
-        self.assertEqual(verificar_contraseña(12837283.8127378), None)
+        self.assertEqual(verificar_contraseña(1.12837), TypeError)
+        self.assertEqual(verificar_contraseña(1000.128), TypeError)
+        self.assertEqual(verificar_contraseña(12837283.8127378), TypeError)
 
     def test_verificar_contraseña_lista(self):
-        self.assertEqual(verificar_contraseña([1, 2, 3, 4]), None)
-        self.assertEqual(verificar_contraseña(["soy", "una", "lista"]), None)
+        self.assertEqual(verificar_contraseña([1, 2, 3, 4]), TypeError)
+        self.assertEqual(verificar_contraseña(["soy", "lista"]), TypeError)
 
     def test_verificar_contraseña_tupla(self):
-        self.assertEqual(verificar_contraseña((1, 2, 3, 4)), None)
-        self.assertEqual(verificar_contraseña(("soy", "una", "tupla")), None)
+        self.assertEqual(verificar_contraseña((1, 2, 3, 4)), TypeError)
+        self.assertEqual(verificar_contraseña(("soy", "tupla")), TypeError)
 
 
     def test_verificar_contraseña_string(self):
