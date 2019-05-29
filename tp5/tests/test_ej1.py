@@ -1,8 +1,8 @@
 import unittest
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from src.ej1 import verificar_contraseña
+sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
+from ej1 import verificar_contraseña
 
 class Test_verificar_contraseña(unittest.TestCase):
     def test_verificar_contraseña_int(self):

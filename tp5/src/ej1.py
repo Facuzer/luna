@@ -18,17 +18,17 @@ def verificar_contraseña(contraseña_dada):
     else:
         return False
 
-
-# Hago una variable para poder saber cuando salgo del while.
-sigo = True
-while sigo:
-    sigo = False
-    contraseña_pedida = input("Ingrese la contraseña: ")
-    # Llamo a la función que hice, le pongo not porque si la contraseña
-    # está bien devuelvo True, y si devuelve True sigue el bucle, lo cual
-    # no tendria sentido.
-    sigo = not verificar_contraseña(contraseña_pedida)
-    if sigo == False:
-        print("\nContraseña correcta.")
-    else:
-        print("\nContraseña incorrecta. Intente de nuevo.\n")
+if __name__ == "__main__":
+    # Hago una variable para poder saber cuando salgo del while.
+    sigo = True
+    while sigo:
+        sigo = False
+        contraseña_pedida = input("Ingrese la contraseña: ")
+        # Llamo a la función que hice, le pongo not porque si la contraseña
+        # está bien devuelvo True, y si devuelve True sigue el bucle, lo cual
+        # no tendria sentido.
+        sigo = not verificar_contraseña(contraseña_pedida)
+        if sigo == False:
+            print("\nContraseña correcta.")
+        else:
+            print("\nContraseña incorrecta. Intente de nuevo.\n")
