@@ -1,8 +1,9 @@
 import unittest
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from src.ej2 import contar_vocales
+sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
+from ej2 import contar_vocales
+
 
 class Test_contar_vocales(unittest.TestCase):
     def test_contar_vocales_int(self):
