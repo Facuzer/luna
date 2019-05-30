@@ -30,3 +30,13 @@ def contar_vocales(palabra):
             return "a"
         else:
             return "e"
+
+
+palabra_pedida = input("Porfavor, ingrese una palabra: ")
+result = contar_vocales(palabra_pedida)
+if result is None:
+    print("Hay la misma cantidad de a's que de e's.")
+elif result == "a":
+    print("Hay más a's que e's.")
+elif result == "e":
+    print("Hay más e's que a's.")
