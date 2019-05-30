@@ -1,6 +1,14 @@
 def contar_vocales(palabra):
     """
+    Función que recibe una palabra y decide si tiene mas letras "e" o mas
+    letras "a".
 
+    Recibe como parámetro un solo dato de tipo string, en caso contrario
+    devuelve TypeError.
+
+    La función devuelve una letra, que hace referencia a la mayor cantidad de
+    vocales que hay, es decir devuelve "a" si hay mas a's y "e" si hay mas e's
+    En caso de que haya iguales e's que a's, devuelve None. 
     """
     # Validaciones
     if not isinstance(palabra, str):
