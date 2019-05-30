@@ -1,8 +1,8 @@
-from ej3 import contar_todas_las_vocales
 import unittest
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
+from ej3 import contar_todas_las_vocales  # noqa
 
 
 class Test_contar_todas_las_vocales(unittest.TestCase):
@@ -30,9 +30,9 @@ class Test_contar_todas_las_vocales(unittest.TestCase):
         self.assertEqual(contar_todas_las_vocales("HOlA COmo EstAs"),
                                                  (2, 1, 0, 3, 0))
         self.assertEqual(contar_todas_las_vocales("Me gusta el queso"),
-                                                 (1, 3, 0, 1, 1))
+                                                 (1, 3, 0, 1, 2))
         self.assertEqual(contar_todas_las_vocales("Me gUstA El quEsO"),
-                                                 (1, 3, 0, 1, 1))
+                                                 (1, 3, 0, 1, 2))
         self.assertEqual(contar_todas_las_vocales("Moon"), (0, 0, 0, 2, 0))
         self.assertEqual(contar_todas_las_vocales("MOon"), (0, 0, 0, 2, 0))
         self.assertEqual(contar_todas_las_vocales("AguanteLinux"),
@@ -42,7 +42,7 @@ class Test_contar_todas_las_vocales(unittest.TestCase):
         self.assertEqual(contar_todas_las_vocales("LinusBenedictTorvals"),
                                                  (1, 2, 2, 1, 1))
         self.assertEqual(contar_todas_las_vocales("TorvalsTeQuiero"),
-                                                 (1, 2, 1, 2, 0))
+                                                 (1, 2, 1, 2, 1))
 
 
 unittest.main()
