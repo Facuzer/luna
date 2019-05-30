@@ -1,4 +1,4 @@
-poovenv/
+venv/
 .vscode/
 tp2/.vscode/
 tp2/src/__pycache__/
