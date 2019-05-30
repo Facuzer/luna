@@ -8,7 +8,7 @@ def contar_vocales(palabra):
 
     La función devuelve una letra, que hace referencia a la mayor cantidad de
     vocales que hay, es decir devuelve "a" si hay mas a's y "e" si hay mas e's
-    En caso de que haya iguales e's que a's, devuelve None. 
+    En caso de que haya iguales e's que a's, devuelve None.
     """
     # Validaciones
     if not isinstance(palabra, str):
@@ -31,12 +31,12 @@ def contar_vocales(palabra):
         else:
             return "e"
 
-
-palabra_pedida = input("Porfavor, ingrese una palabra: ")
-result = contar_vocales(palabra_pedida)
-if result is None:
-    print("Hay la misma cantidad de a's que de e's.")
-elif result == "a":
-    print("Hay más a's que e's.")
-elif result == "e":
-    print("Hay más e's que a's.")
+if __name__ == "__main__":
+    palabra_pedida = input("Porfavor, ingrese una palabra: ")
+    result = contar_vocales(palabra_pedida)
+    if result is None:
+        print("Hay la misma cantidad de a's que de e's.")
+    elif result == "a":
+        print("Hay más a's que e's.")
+    elif result == "e":
+        print("Hay más e's que a's.")
