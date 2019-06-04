@@ -2,7 +2,7 @@ import unittest
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src/'))
-from ej5 import primera_letra_palabra  # noqa
+from ej5_a import primera_letra_palabra  # noqa
 
 
 class Test_primera_letra_palabra(unittest.TestCase):
