@@ -3,12 +3,12 @@ def comprobar_capitalizacion(palabra_no_cap, palabra_cap):
     Función que recibe dos palabras y comprueba si la segunda es la versión
     capitalizada de la primera.
 
-    Recibe 2 parámetros, ambos de tipo string. El primero debe ser la version
+    Recibe 2 parámetros, ambos de tipo string. El primero debe ser la versión
     no capitalizada y la segunda debe ser la versión capitalizada. En caso de
     que se den valores de tipo no string, devolverá TypeError.
 
     La función devuelve True si la segunda palabra es la versión capitalizada
-    de la primera palabra. Devuelve false en caso contrario.
+    de la primera palabra. Devuelve False en caso contrario.
     """
     # Valido datos
     palabras = (palabra_cap, palabra_no_cap)
