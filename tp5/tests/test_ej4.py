@@ -1,8 +1,8 @@
 import unittest
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
-from ej3 import comprobar_capitalizacion  # noqa
+sys.path.append(os.path.join(os.path.dirname(__file__), '../src/'))
+from ej4 import comprobar_capitalizacion  # noqa
 
 
 class Test_comprobar_capitalizacion(unittest.TestCase):
