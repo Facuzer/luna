@@ -17,7 +17,6 @@ class Test_primera_letra_palabra(unittest.TestCase):
         self.assertEqual(primera_letra_palabra(["soy", "una", "tupla"]),
                                                TypeError)
 
-
     def test_primera_letra_palabra_tupla(self):
         self.assertEqual(primera_letra_palabra((1, 2, 3, 4)), TypeError)
         self.assertEqual(primera_letra_palabra(("soy", "tupla")), TypeError)

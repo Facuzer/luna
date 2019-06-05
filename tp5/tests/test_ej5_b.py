@@ -29,7 +29,7 @@ class Test_capitalizar_primera_letra(unittest.TestCase):
         self.assertEqual(capitalizar_primera_letra("Hoy dia Pleno"),
                                                    "Hoy Dia Pleno")
         self.assertEqual(capitalizar_primera_letra("sOY mUY feLIZ"),
-                                                   "W")
+                                                   "SOY MUY FeLIZ")
         self.assertEqual(capitalizar_primera_letra("valenTIN schiaFFINO"),
                                                    "ValenTIN SchiaFFINO")
         self.assertEqual(capitalizar_primera_letra("hola señor"),
