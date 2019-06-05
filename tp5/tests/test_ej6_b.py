@@ -29,16 +29,16 @@ class Test_solo_vocales(unittest.TestCase):
         self.assertEqual(solo_vocales("ayer me aguante"),
                                                    "ae e auae")
         self.assertEqual(solo_vocales("amaneci muy almanaque"),
-                                                   "aae u aaaue")
+                                                   "aaei u aaaue")
         self.assertEqual(solo_vocales(
                                         "avión hola aeropuerto ala delta"),
                                                    "aió oa aeoueo aa ea")
         self.assertEqual(solo_vocales("AGUANTE EL AGUA AZUL"), 
-                                                   "AUAE E AUA AUL")
+                                                   "AUAE E AUA AU")
         self.assertEqual(solo_vocales("áááábbbbbbbcccccddd"),
                                                    "áááá")
         self.assertEqual(solo_vocales("íííóóóúúúfede"),
-                                                  "íííóóóúúú")
+                                                  "íííóóóúúúee")
         self.assertEqual(solo_vocales("Laaeiocaeioudaeotaem"),
                                                    "aaeioaeiouaeoae")
 
