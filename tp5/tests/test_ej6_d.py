@@ -24,9 +24,11 @@ class Test_check_palindromo(unittest.TestCase):
     def test_check_palindromo_string(self):
         self.assertEqual(check_palindromo("hola todo bien"), False)
         self.assertEqual(check_palindromo("anita lava la tina"), True)
+        self.assertEqual(check_palindromo("AnITA lAva lA tIna"), True)
         self.assertEqual(check_palindromo("asdsa"), True)
         self.assertEqual(check_palindromo("sOY mUY feLIZ"), False)
         self.assertEqual(check_palindromo("Neuquen"), True)
+        self.assertEqual(check_palindromo("NEuQuEn"), True)
         self.assertEqual(check_palindromo("Neuquén"), False)
         self.assertEqual(check_palindromo(""), True )
         self.assertEqual(check_palindromo("F"), True)
