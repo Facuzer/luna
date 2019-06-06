@@ -29,18 +29,18 @@ class Test_cambiar_vocales(unittest.TestCase):
         self.assertEqual(cambiar_vocales("Hoy dia Pleno"),
                                          "Huy doe Plinu")
         self.assertEqual(cambiar_vocales("sOY mUY feLIZ"),
-                                                   "sUY mAY fILOZ")
+                                                   "sUY mAY fiLOZ")
         self.assertEqual(cambiar_vocales("valenTIN schiaFFINO"),
-                                                   "ValenTIN SchiaFFINO")
+                                                   "velinTON schoeFFONU")
         self.assertEqual(cambiar_vocales("hola señor"),
-                                                   "Hola Señor")
+                                                   "hule siñur")
         self.assertEqual(cambiar_vocales("Futbol es de enrique"), 
-                                                   "Futbol Es De Enrique")
+                                                   "Fatbul is di inroqai")
         self.assertEqual(cambiar_vocales("Complete the Monument"),
-                                                   "Complete The Monument")
+                                                   "Cumpliti thi Munamint")
         self.assertEqual(cambiar_vocales("Hola"),
-                                                   "Hola")
-        self.assertEqual(cambiar_vocales("s"), "S")
+                                                   "Hule")
+        self.assertEqual(cambiar_vocales("s"), "s")
 
 
 unittest.main()
