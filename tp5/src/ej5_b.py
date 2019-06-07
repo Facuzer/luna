@@ -25,3 +25,7 @@ def capitalizar_primera_letra(frase):
     # Lo cambio de lista a string
     resultado_final = " ".join(resultado_final)
     return resultado_final
+
+if __name__ == "__main__":
+    frase = input("Ingrese su frase: ")
+    print(capitalizar_primera_letra(frase))

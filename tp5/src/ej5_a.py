@@ -20,3 +20,7 @@ def primera_letra_palabra(frase):
     for palabra in palabras:
         resultado_final += palabra[0].upper()
     return resultado_final
+
+if __name__ == "__main__":
+    frase = input("Ingrese su frase: ")
+    print(primera_letra_palabra(frase))
