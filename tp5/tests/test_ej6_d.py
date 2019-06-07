@@ -15,7 +15,7 @@ class Test_check_palindromo(unittest.TestCase):
     def test_check_palindromo_lista(self):
         self.assertEqual(check_palindromo([1, 2, 3, 4]), TypeError)
         self.assertEqual(check_palindromo(["soy", "una", "tupla"]),
-                                               TypeError)
+                         TypeError)
 
     def test_check_palindromo_tupla(self):
         self.assertEqual(check_palindromo((1, 2, 3, 4)), TypeError)
@@ -30,7 +30,7 @@ class Test_check_palindromo(unittest.TestCase):
         self.assertEqual(check_palindromo("Neuquen"), True)
         self.assertEqual(check_palindromo("NEuQuEn"), True)
         self.assertEqual(check_palindromo("Neuquén"), False)
-        self.assertEqual(check_palindromo(""), True )
+        self.assertEqual(check_palindromo(""), True)
         self.assertEqual(check_palindromo("F"), True)
         self.assertEqual(check_palindromo("Hola"), False)
         self.assertEqual(check_palindromo("s"), True)

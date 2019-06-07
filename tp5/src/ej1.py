@@ -28,7 +28,7 @@ if __name__ == "__main__":
         # está bien devuelvo True, y si devuelve True sigue el bucle, lo cual
         # no tendria sentido.
         sigo = not verificar_contraseña(contraseña_pedida)
-        if sigo == False:
+        if not sigo:
             print("\nContraseña correcta.")
         else:
             print("\nContraseña incorrecta. Intente de nuevo.\n")

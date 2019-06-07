@@ -20,4 +20,3 @@ def primera_letra_palabra(frase):
     for palabra in palabras:
         resultado_final += palabra[0].upper()
     return resultado_final
-    

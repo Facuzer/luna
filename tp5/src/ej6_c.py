@@ -16,14 +16,14 @@ def cambiar_vocales(frase):
                "A", "E", "I", "O", "U",
                "á", "é", "í", "ó", "ú",
                "Á", "É", "Í", "Ó", "Ú")
-    cambiar_vocales = {"a" : "e", "e" : "i", "i" : "o", "o" : "u", "u" : "a",
-                       "A" : "E", "E" : "I", "I" : "O", "O" : "U", "U" : "A",
-                       "á" : "é", "é" : "í", "í" : "ó", "ó" : "ú", "ú" : "á",
-                       "Á" : "É", "É" : "Í", "Í" : "Ó", "Ó" : "Ú", "Ú" : "Á"}
+    cambiar_vocales = {"a": "e", "e": "i", "i": "o", "o": "u", "u": "a",
+                       "A": "E", "E": "I", "I": "O", "O": "U", "U": "A",
+                       "á": "é", "é": "í", "í": "ó", "ó": "ú", "ú": "á",
+                       "Á": "É", "É": "Í", "Í": "Ó", "Ó": "Ú", "Ú": "Á"}
     frase_final = ""
     for letra in frase:
         if letra in vocales:
             frase_final += cambiar_vocales[letra]
         else:
-            frase_final+= letra
+            frase_final += letra
     return frase_final

@@ -7,10 +7,10 @@ from ej7 import consulta, alta, modificacion  # noqa
 
 class Test_consulta(unittest.TestCase):
     def setUp(self):
-        self.dicc = {"fede" : "1187656789",
-                     "valen" : "1131334144",
-                     "pacio" : "1157645012",
-                     "heras" : "1168485566"}
+        self.dicc = {"fede": "1187656789",
+                     "valen": "1131334144",
+                     "pacio": "1157645012",
+                     "heras": "1168485566"}
 
     def test_consulta_int(self):
         self.assertEqual(consulta(self.dicc, 10), TypeError)
@@ -20,7 +20,8 @@ class Test_consulta(unittest.TestCase):
 
     def test_consulta_lista(self):
         self.assertEqual(consulta(self.dicc, [1, 2, 3, 4]), TypeError)
-        self.assertEqual(consulta(self.dicc, ["soy", "una", "tupla"]), TypeError)
+        self.assertEqual(consulta(self.dicc, ["soy", "una", "tupla"]),
+                         TypeError)
 
     def test_consulta_tupla(self):
         self.assertEqual(consulta(self.dicc, (1, 2, 3, 4)), TypeError)
@@ -38,16 +39,15 @@ class Test_consulta(unittest.TestCase):
 
 class Test_alta(unittest.TestCase):
     def setUp(self):
-        self.dicc = {"fede" : "1187656789",
-                     "valen" : "1131334144",
-                     "pacio" : "1157645012",
-                     "heras" : "1168485566"}
+        self.dicc = {"fede": "1187656789",
+                     "valen": "1131334144",
+                     "pacio": "1157645012",
+                     "heras": "1168485566"}
 
     def test_alta_int(self):
         self.assertEqual(alta(self.dicc, 1, 1), TypeError)
         self.assertEqual(alta(self.dicc, "valen", 1), TypeError)
         self.assertEqual(alta(self.dicc, 1, "valen"), TypeError)
-
 
     def test_alta_float(self):
         self.assertEqual(alta(self.dicc, 1.123, 1.123), TypeError)
@@ -58,7 +58,6 @@ class Test_alta(unittest.TestCase):
         self.assertEqual(alta(self.dicc, [1, 2], "hola"), TypeError)
         self.assertEqual(alta(self.dicc, "hola", [1, 2]), TypeError)
         self.assertEqual(alta(self.dicc, [1, 2], [1, 2]), TypeError)
-        
 
     def test_alta_tupla(self):
         self.assertEqual(alta(self.dicc, (1, 2), (1, 2)), TypeError)
@@ -76,10 +75,10 @@ class Test_alta(unittest.TestCase):
 
 class Test_modificacion(unittest.TestCase):
     def setUp(self):
-        self.dicc = {"fede" : "1187656789",
-                     "valen" : "1131334144",
-                     "pacio" : "1157645012",
-                     "heras" : "1168485566"}
+        self.dicc = {"fede": "1187656789",
+                     "valen": "1131334144",
+                     "pacio": "1157645012",
+                     "heras": "1168485566"}
 
     def test_modificacion_int(self):
         self.assertEqual(modificacion(self.dicc, 1, 1), TypeError)
@@ -99,11 +98,12 @@ class Test_modificacion(unittest.TestCase):
     def test_modificacion_tupla(self):
         self.assertEqual(modificacion(self.dicc, (1, 2), (1, 2)), TypeError)
         self.assertEqual(modificacion(self.dicc, (1, 2), "hola"), TypeError)
-        self.assertEqual(modificacion(self.dicc, "hola", (1, 2)), TypeError)        
+        self.assertEqual(modificacion(self.dicc, "hola", (1, 2)), TypeError)
 
     def test_modificacion_string(self):
         # No existe el registro
-        self.assertEqual(modificacion(self.dicc, "malvasio", "1131334144"), None)
+        self.assertEqual(modificacion(self.dicc, "malvasio", "1131334144"),
+                         None)
         # Existe
         diccAux = modificacion(self.dicc, "valen", "1131334145")
         self.assertEqual(consulta(diccAux, "valen"), "1131334145")

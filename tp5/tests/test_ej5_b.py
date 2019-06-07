@@ -15,31 +15,32 @@ class Test_capitalizar_primera_letra(unittest.TestCase):
     def test_capitalizar_primera_letra_lista(self):
         self.assertEqual(capitalizar_primera_letra([1, 2, 3, 4]), TypeError)
         self.assertEqual(capitalizar_primera_letra(["soy", "una", "tupla"]),
-                                               TypeError)
+                         TypeError)
 
     def test_capitalizar_primera_letra_tupla(self):
         self.assertEqual(capitalizar_primera_letra((1, 2, 3, 4)), TypeError)
-        self.assertEqual(capitalizar_primera_letra(("soy", "tupla")), TypeError)
+        self.assertEqual(capitalizar_primera_letra(("soy", "tupla")),
+                         TypeError)
 
     def test_capitalizar_primera_letra_string(self):
         self.assertEqual(capitalizar_primera_letra("hola todo bien"),
-                                                   "Hola Todo Bien")
+                         "Hola Todo Bien")
         self.assertEqual(capitalizar_primera_letra("windows media center"),
-                                                   "Windows Media Center")
+                         "Windows Media Center")
         self.assertEqual(capitalizar_primera_letra("Hoy dia Pleno"),
-                                                   "Hoy Dia Pleno")
+                         "Hoy Dia Pleno")
         self.assertEqual(capitalizar_primera_letra("sOY mUY feLIZ"),
-                                                   "SOY MUY FeLIZ")
+                         "SOY MUY FeLIZ")
         self.assertEqual(capitalizar_primera_letra("valenTIN schiaFFINO"),
-                                                   "ValenTIN SchiaFFINO")
+                         "ValenTIN SchiaFFINO")
         self.assertEqual(capitalizar_primera_letra("hola señor"),
-                                                   "Hola Señor")
-        self.assertEqual(capitalizar_primera_letra("Futbol es de enrique"), 
-                                                   "Futbol Es De Enrique")
+                         "Hola Señor")
+        self.assertEqual(capitalizar_primera_letra("Futbol es de enrique"),
+                         "Futbol Es De Enrique")
         self.assertEqual(capitalizar_primera_letra("Complete the Monument"),
-                                                   "Complete The Monument")
+                         "Complete The Monument")
         self.assertEqual(capitalizar_primera_letra("Hola"),
-                                                   "Hola")
+                         "Hola")
         self.assertEqual(capitalizar_primera_letra("s"), "S")
 
 

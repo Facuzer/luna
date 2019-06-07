@@ -2,7 +2,7 @@ import unittest
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
-from ej2 import contar_vocales
+from ej2 import contar_vocales  # noqa
 
 
 class Test_contar_vocales(unittest.TestCase):
@@ -10,7 +10,7 @@ class Test_contar_vocales(unittest.TestCase):
         self.assertEqual(contar_vocales(1), TypeError)
         self.assertEqual(contar_vocales(1000), TypeError)
         self.assertEqual(contar_vocales(12837283), TypeError)
-    
+
     def test_contar_vocales_float(self):
         self.assertEqual(contar_vocales(1.12837), TypeError)
         self.assertEqual(contar_vocales(1000.128), TypeError)
@@ -42,5 +42,5 @@ class Test_contar_vocales(unittest.TestCase):
         self.assertEqual(contar_vocales("FMOon"), None)
         self.assertEqual(contar_vocales("fMoon"), None)
 
-        
+
 unittest.main()

@@ -16,6 +16,6 @@ def solo_consonantes(frase):
     vocales = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U",
                "á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú"]
     for letra in frase:
-        if not letra in vocales:
+        if letra not in vocales:
             frase_final += letra
     return frase_final

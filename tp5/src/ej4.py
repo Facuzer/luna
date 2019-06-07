@@ -28,4 +28,4 @@ if __name__ == "__main__":
     if comprobar_capitalizacion(p_no_cap, p_cap):
         print("La segunda palabra es la versión capitalizada de la primera.")
     else:
-        print("La segunda palabra no es la versión capitalizada de la primera.")
+        print("La segunda palabra no es la versión capitalizada de la primera")
