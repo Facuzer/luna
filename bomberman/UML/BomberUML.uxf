@@ -3,7 +3,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>234</x>
+      <x>276</x>
       <y>330</y>
       <w>138</w>
       <h>78</h>
@@ -22,7 +22,7 @@ pos_middle_px : list[2]
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>114</x>
+      <x>156</x>
       <y>234</y>
       <w>78</w>
       <h>78</h>
@@ -40,7 +40,7 @@ fg=black</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
+      <x>432</x>
       <y>330</y>
       <w>180</w>
       <h>114</h>
@@ -55,7 +55,7 @@ fg=black</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>222</x>
+      <x>264</x>
       <y>102</y>
       <w>138</w>
       <h>84</h>
@@ -72,7 +72,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>366</x>
+      <x>408</x>
       <y>366</y>
       <w>36</w>
       <h>18</h>
@@ -83,7 +83,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
+      <x>342</x>
       <y>306</y>
       <w>18</w>
       <h>36</h>
@@ -94,7 +94,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>288</x>
       <y>234</y>
       <w>120</w>
       <h>78</h>
@@ -113,7 +113,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>54</x>
+      <x>96</x>
       <y>336</y>
       <w>162</w>
       <h>90</h>
@@ -133,7 +133,7 @@ vidas : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
+      <x>192</x>
       <y>306</y>
       <w>18</w>
       <h>42</h>
@@ -144,7 +144,7 @@ vidas : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>252</x>
       <y>366</y>
       <w>36</w>
       <h>18</h>
@@ -155,18 +155,18 @@ vidas : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>186</x>
+      <x>228</x>
       <y>264</y>
-      <w>66</w>
+      <w>72</w>
       <h>18</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
+      <x>342</x>
       <y>180</y>
       <w>18</w>
       <h>66</h>
@@ -177,7 +177,7 @@ vidas : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
+      <x>432</x>
       <y>210</y>
       <w>162</w>
       <h>90</h>
@@ -190,14 +190,14 @@ delay : int
 -set_nivel_exposion(nivel : int) : None
 -get_nivel_explosion() : int
 -get_delay() : int
--set_delay(delay : float) : None
+-set_delay(delay : int) : None
 -explotar() : None</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>510</x>
       <y>294</y>
       <w>18</w>
       <h>48</h>
@@ -208,7 +208,7 @@ delay : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>642</x>
+      <x>684</x>
       <y>66</y>
       <w>138</w>
       <h>114</h>
@@ -223,13 +223,13 @@ delay : int
 -get_delay() : int
 -set_nivel() : None
 -set_delay() : None
-+explotar(objetivo : Obstaculo)</panel_attributes>
+-explotar(objetivo : Obstaculo)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>354</x>
+      <x>396</x>
       <y>126</y>
       <w>300</w>
       <h>18</h>
@@ -240,7 +240,7 @@ delay : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>510</x>
       <y>438</y>
       <w>18</w>
       <h>30</h>
@@ -251,7 +251,7 @@ delay : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>444</x>
+      <x>486</x>
       <y>456</y>
       <w>60</w>
       <h>78</h>
@@ -266,7 +266,7 @@ delay : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>426</x>
+      <x>468</x>
       <y>564</y>
       <w>90</w>
       <h>78</h>
@@ -283,7 +283,7 @@ delay : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
+      <x>510</x>
       <y>528</y>
       <w>18</w>
       <h>48</h>
@@ -294,7 +294,7 @@ delay : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>42</x>
       <y>450</y>
       <w>138</w>
       <h>138</h>
@@ -313,8 +313,8 @@ pj_salir(pj : Personaje)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>450</y>
+      <x>204</x>
+      <y>480</y>
       <w>72</w>
       <h>84</h>
     </coordinates>
@@ -327,8 +327,8 @@ pj_salir(pj : Personaje)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>132</x>
-      <y>480</y>
+      <x>174</x>
+      <y>510</y>
       <w>42</w>
       <h>18</h>
     </coordinates>
@@ -338,7 +338,7 @@ pj_salir(pj : Personaje)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1146</x>
+      <x>1188</x>
       <y>0</y>
       <w>60</w>
       <h>18</h>
@@ -350,7 +350,7 @@ pj_salir(pj : Personaje)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
+      <x>642</x>
       <y>330</y>
       <w>204</w>
       <h>156</h>
@@ -373,7 +373,7 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>564</x>
+      <x>606</x>
       <y>378</y>
       <w>48</w>
       <h>18</h>
@@ -384,7 +384,7 @@ skin : pygame.image
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1182</x>
+      <x>1224</x>
       <y>18</y>
       <w>60</w>
       <h>18</h>
@@ -396,7 +396,7 @@ skin : pygame.image
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>834</x>
+      <x>876</x>
       <y>468</y>
       <w>114</w>
       <h>78</h>
@@ -412,18 +412,18 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
+      <x>924</x>
       <y>444</y>
       <w>18</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>834</x>
+      <x>876</x>
       <y>330</y>
       <w>108</w>
       <h>120</h>
@@ -438,18 +438,18 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
+      <x>840</x>
       <y>390</y>
       <w>48</w>
       <h>18</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>834</x>
+      <x>876</x>
       <y>192</y>
       <w>108</w>
       <h>120</h>
@@ -464,7 +464,7 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
+      <x>738</x>
       <y>228</y>
       <w>150</w>
       <h>114</h>
@@ -475,8 +475,8 @@ skin : pygame.image
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>702</x>
-      <y>582</y>
+      <x>744</x>
+      <y>594</y>
       <w>114</w>
       <h>78</h>
     </coordinates>
@@ -490,8 +490,8 @@ skin : pygame.image
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>834</x>
-      <y>582</y>
+      <x>876</x>
+      <y>594</y>
       <w>114</w>
       <h>78</h>
     </coordinates>
@@ -505,8 +505,8 @@ skin : pygame.image
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>966</x>
-      <y>582</y>
+      <x>1008</x>
+      <y>594</y>
       <w>114</w>
       <h>78</h>
     </coordinates>
@@ -520,40 +520,40 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
+      <x>924</x>
       <y>540</y>
       <w>18</w>
-      <h>54</h>
+      <h>66</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>552</y>
+      <x>792</x>
+      <y>564</y>
       <w>150</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0;230.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>552</y>
+      <x>924</x>
+      <y>564</y>
       <w>150</w>
       <h>42</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>230.0;50.0;230.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>558</x>
+      <x>600</x>
       <y>564</y>
       <w>90</w>
       <h>78</h>
@@ -562,7 +562,6 @@ skin : pygame.image
 --
 PU : Power_up
 --
--romper() : None
 -drop
 </panel_attributes>
     <additional_attributes/>
@@ -570,7 +569,7 @@ PU : Power_up
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
+      <x>552</x>
       <y>600</y>
       <w>60</w>
       <h>18</h>
@@ -581,7 +580,7 @@ PU : Power_up
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
+      <x>738</x>
       <y>174</y>
       <w>18</w>
       <h>72</h>
