@@ -40,6 +40,7 @@ personaje : Personaje
 pj_morir(pj : Personaje)
 pj_salir(pj : Personaje)
 
+
 loop()
 </panel_attributes>
     <additional_attributes/>

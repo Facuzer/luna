@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>16</x>
-      <y>80</y>
-      <w>128</w>
-      <h>24</h>
+      <x>133</x>
+      <y>98</y>
+      <w>112</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>_personaje :Personaje_</panel_attributes>
     <additional_attributes/>
@@ -15,10 +14,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>64</x>
-      <y>216</y>
-      <w>24</w>
-      <h>88</h>
+      <x>175</x>
+      <y>217</y>
+      <w>21</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -26,10 +25,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>624</x>
-      <y>80</y>
-      <w>128</w>
-      <h>24</h>
+      <x>665</x>
+      <y>98</y>
+      <w>112</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>_celda : Celda_</panel_attributes>
     <additional_attributes/>
@@ -37,10 +36,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>200</y>
-      <w>24</w>
-      <h>96</h>
+      <x>707</x>
+      <y>203</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -48,10 +47,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>64</x>
-      <y>128</y>
-      <w>16</w>
-      <h>96</h>
+      <x>175</x>
+      <y>140</y>
+      <w>14</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -59,10 +58,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>64</x>
-      <y>96</y>
-      <w>24</w>
-      <h>48</h>
+      <x>175</x>
+      <y>112</y>
+      <w>21</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -70,10 +69,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>160</y>
-      <w>408</w>
-      <h>32</h>
+      <x>182</x>
+      <y>168</y>
+      <w>357</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
                   poner_bomba(bomba : Bomba, celda : Celda)</panel_attributes>
@@ -82,21 +81,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>216</y>
-      <w>24</w>
-      <h>80</h>
+      <x>525</x>
+      <y>210</y>
+      <w>21</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>416</x>
-      <y>80</y>
-      <w>128</w>
-      <h>24</h>
+      <x>483</x>
+      <y>98</y>
+      <w>112</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>_mapa : Mapa_</panel_attributes>
     <additional_attributes/>
@@ -104,10 +103,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>464</x>
-      <y>176</y>
-      <w>16</w>
-      <h>48</h>
+      <x>525</x>
+      <y>182</y>
+      <w>14</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -115,10 +114,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>96</y>
-      <w>24</w>
-      <h>96</h>
+      <x>525</x>
+      <y>112</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -126,10 +125,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>232</x>
-      <y>120</y>
-      <w>128</w>
-      <h>40</h>
+      <x>322</x>
+      <y>133</y>
+      <w>112</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>_bomb : Bomba_</panel_attributes>
     <additional_attributes/>
@@ -137,10 +136,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>152</y>
-      <w>24</w>
-      <h>144</h>
+      <x>364</x>
+      <y>161</y>
+      <w>21</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
@@ -148,10 +147,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>120</y>
-      <w>176</w>
-      <h>32</h>
+      <x>182</x>
+      <y>133</y>
+      <w>154</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 init(mapa : Mapa)</panel_attributes>
@@ -160,10 +159,10 @@ init(mapa : Mapa)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>136</y>
-      <w>176</w>
-      <h>32</h>
+      <x>182</x>
+      <y>147</y>
+      <w>154</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 self : Bomba</panel_attributes>
@@ -172,10 +171,10 @@ self : Bomba</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>672</x>
-      <y>192</y>
-      <w>16</w>
-      <h>16</h>
+      <x>707</x>
+      <y>196</y>
+      <w>14</w>
+      <h>14</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -183,10 +182,10 @@ self : Bomba</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>96</y>
-      <w>24</w>
-      <h>112</h>
+      <x>707</x>
+      <y>112</y>
+      <w>21</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
@@ -194,10 +193,10 @@ self : Bomba</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>472</x>
-      <y>176</y>
-      <w>216</w>
-      <h>40</h>
+      <x>532</x>
+      <y>182</y>
+      <w>189</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 poner_bomba(bomba : Bomba)
