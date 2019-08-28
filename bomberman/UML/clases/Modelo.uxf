@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
-  <zoom_level>4</zoom_level>
+  <zoom_level>12</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>116</x>
-      <y>160</y>
-      <w>104</w>
-      <h>68</h>
+      <x>0</x>
+      <y>372</y>
+      <w>312</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>/Obstáculo_movil/
 --
@@ -21,10 +21,10 @@ celda_actual : Celda
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>232</x>
-      <y>160</y>
-      <w>120</w>
-      <h>76</h>
+      <x>348</x>
+      <y>372</y>
+      <w>360</w>
+      <h>228</h>
     </coordinates>
     <panel_attributes>/Obstaculo/
 --
@@ -36,10 +36,10 @@ mapa : Mapa
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>184</y>
-      <w>24</w>
-      <h>12</h>
+      <x>300</x>
+      <y>444</y>
+      <w>72</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
@@ -47,10 +47,10 @@ mapa : Mapa
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>172</x>
-      <y>132</y>
-      <w>12</w>
-      <h>36</h>
+      <x>168</x>
+      <y>288</y>
+      <w>36</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -58,10 +58,10 @@ mapa : Mapa
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>136</x>
-      <y>84</y>
-      <w>80</w>
-      <h>52</h>
+      <x>60</x>
+      <y>144</y>
+      <w>240</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Enemigo
 --
@@ -77,15 +77,14 @@ mapa : Mapa
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>340</y>
-      <w>124</w>
-      <h>112</h>
+      <x>12</x>
+      <y>612</y>
+      <w>372</w>
+      <h>336</h>
     </coordinates>
     <panel_attributes>Personaje
 --
 vidas : int
-celda_actual : Celda
 --
 +mover_arriba() : None
 +mover_derecha() : None
@@ -100,21 +99,21 @@ celda_actual : Celda
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>172</x>
-      <y>224</y>
-      <w>12</w>
-      <h>124</h>
+      <x>168</x>
+      <y>564</y>
+      <w>36</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;290.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>236</x>
-      <y>72</y>
-      <w>108</w>
-      <h>68</h>
+      <x>360</x>
+      <y>108</y>
+      <w>324</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>Bomba
 --
@@ -127,10 +126,10 @@ delay : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>136</y>
-      <w>12</w>
-      <h>32</h>
+      <x>516</x>
+      <y>300</y>
+      <w>36</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -138,10 +137,10 @@ delay : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>376</x>
-      <y>36</y>
-      <w>92</w>
-      <h>104</h>
+      <x>780</x>
+      <y>0</y>
+      <w>276</w>
+      <h>312</h>
     </coordinates>
     <panel_attributes>Explosion
 --
@@ -158,10 +157,10 @@ celda : Celda
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>284</x>
-      <y>232</y>
-      <w>12</w>
-      <h>20</h>
+      <x>504</x>
+      <y>588</y>
+      <w>36</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
@@ -169,10 +168,10 @@ celda : Celda
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>268</x>
-      <y>244</y>
-      <w>40</w>
-      <h>52</h>
+      <x>456</x>
+      <y>624</y>
+      <w>120</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Pared
 --
@@ -185,10 +184,10 @@ celda : Celda
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>256</x>
-      <y>332</y>
-      <w>60</w>
-      <h>52</h>
+      <x>420</x>
+      <y>888</y>
+      <w>180</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Pared_rompible
 --
@@ -202,10 +201,10 @@ celda : Celda
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>284</x>
-      <y>292</y>
-      <w>12</w>
-      <h>48</h>
+      <x>504</x>
+      <y>768</y>
+      <w>36</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -213,10 +212,10 @@ celda : Celda
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>160</y>
-      <w>136</w>
-      <h>104</h>
+      <x>1152</x>
+      <y>372</y>
+      <w>408</w>
+      <h>312</h>
     </coordinates>
     <panel_attributes>/Celda/
 --
@@ -234,10 +233,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>192</y>
-      <w>24</w>
-      <h>12</h>
+      <x>696</x>
+      <y>468</y>
+      <w>72</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
@@ -245,10 +244,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>644</x>
-      <y>252</y>
-      <w>76</w>
-      <h>52</h>
+      <x>1584</x>
+      <y>648</y>
+      <w>228</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>/Power_up/
 --
@@ -261,10 +260,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>676</x>
-      <y>236</y>
-      <w>12</w>
-      <h>24</h>
+      <x>1680</x>
+      <y>600</y>
+      <w>36</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -272,10 +271,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>644</x>
-      <y>160</y>
-      <w>72</w>
-      <h>80</h>
+      <x>1584</x>
+      <y>372</y>
+      <w>216</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Celda_vacia
 --
@@ -287,10 +286,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>632</x>
-      <y>200</y>
-      <w>20</w>
-      <h>12</h>
+      <x>1548</x>
+      <y>492</y>
+      <w>60</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
@@ -298,10 +297,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>592</x>
-      <y>56</y>
-      <w>72</w>
-      <h>76</h>
+      <x>1428</x>
+      <y>60</y>
+      <w>216</w>
+      <h>228</h>
     </coordinates>
     <panel_attributes>Salida
 --
@@ -313,10 +312,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>612</x>
-      <y>336</y>
-      <w>48</w>
-      <h>32</h>
+      <x>1488</x>
+      <y>900</y>
+      <w>144</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Speed_up
 --
@@ -328,10 +327,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>664</x>
-      <y>336</y>
-      <w>48</w>
-      <h>32</h>
+      <x>1644</x>
+      <y>900</y>
+      <w>144</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Bomb_range_up
 --
@@ -343,10 +342,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>336</y>
-      <w>48</w>
-      <h>32</h>
+      <x>1812</x>
+      <y>900</y>
+      <w>144</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Bomb_delay_up
 --
@@ -358,10 +357,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>684</x>
-      <y>300</y>
-      <w>12</w>
-      <h>44</h>
+      <x>1704</x>
+      <y>792</y>
+      <w>36</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
@@ -369,10 +368,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>632</x>
-      <y>316</y>
-      <w>56</w>
-      <h>28</h>
+      <x>1548</x>
+      <y>840</y>
+      <w>168</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0;120.0;10.0</additional_attributes>
@@ -380,10 +379,10 @@ columna : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>676</x>
-      <y>316</y>
-      <w>88</w>
-      <h>28</h>
+      <x>1680</x>
+      <y>840</y>
+      <w>264</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>200.0;50.0;200.0;10.0;10.0;10.0</additional_attributes>
@@ -391,10 +390,10 @@ columna : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>256</x>
-      <y>400</y>
-      <w>60</w>
-      <h>52</h>
+      <x>252</x>
+      <y>1104</y>
+      <w>180</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Pared_con_obj
 --
@@ -407,21 +406,21 @@ PU : Power_up
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>284</x>
-      <y>380</y>
-      <w>12</w>
-      <h>28</h>
+      <x>336</x>
+      <y>1032</y>
+      <w>144</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;60.0;60.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>136</y>
-      <w>12</w>
-      <h>36</h>
+      <x>900</x>
+      <y>300</y>
+      <w>36</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -429,10 +428,10 @@ PU : Power_up
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>128</y>
-      <w>12</w>
-      <h>40</h>
+      <x>1488</x>
+      <y>276</y>
+      <w>36</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -440,10 +439,10 @@ PU : Power_up
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>328</x>
-      <y>296</y>
-      <w>156</w>
-      <h>92</h>
+      <x>636</x>
+      <y>780</y>
+      <w>468</w>
+      <h>276</h>
     </coordinates>
     <panel_attributes>Mapa
 --
@@ -461,10 +460,10 @@ largo : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>260</y>
-      <w>52</w>
-      <h>72</h>
+      <x>1092</x>
+      <y>672</y>
+      <w>156</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;160.0;50.0;160.0;110.0;10.0</additional_attributes>
@@ -472,10 +471,10 @@ largo : int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>232</y>
-      <w>24</w>
-      <h>88</h>
+      <x>588</x>
+      <y>588</y>
+      <w>72</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;200.0;40.0;200.0</additional_attributes>
@@ -483,10 +482,10 @@ largo : int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
-      <y>164</y>
-      <w>112</w>
-      <h>68</h>
+      <x>744</x>
+      <y>384</y>
+      <w>336</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>/Visible/
 --
@@ -501,10 +500,10 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>472</x>
-      <y>192</y>
-      <w>36</w>
-      <h>12</h>
+      <x>1068</x>
+      <y>468</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
@@ -512,10 +511,10 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>76</y>
-      <w>36</w>
-      <h>256</h>
+      <x>1044</x>
+      <y>120</y>
+      <w>108</w>
+      <h>768</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0;70.0;620.0</additional_attributes>
@@ -523,12 +522,39 @@ skin : pygame.image
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>56</y>
-      <w>60</w>
-      <h>112</h>
+      <x>1044</x>
+      <y>60</y>
+      <w>180</w>
+      <h>336</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0;130.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>1104</y>
+      <w>180</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Pared_con_salida
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>1032</y>
+      <w>60</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>30.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
