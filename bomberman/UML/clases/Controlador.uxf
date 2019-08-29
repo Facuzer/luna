@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
-      <w>230</w>
-      <h>220</h>
+      <x>108</x>
+      <y>81</y>
+      <w>207</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Input_controller
 --
@@ -24,10 +24,10 @@ pj_poner_bomba() : None
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>20</y>
-      <w>230</w>
-      <h>230</h>
+      <x>369</x>
+      <y>81</y>
+      <w>207</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>Game
 --
@@ -36,24 +36,25 @@ tiempo : int
 mapa : Mapa
 ic : Input_controller
 personaje : Personaje
+lista_enemigos : list[5..*]
 --
-pj_morir(pj : Personaje)
-pj_salir(pj : Personaje)
++pj_morir(pj : Personaje)
++pj_salir(pj : Personaje)
 
 
-loop()
++loop()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>90</y>
-      <w>110</w>
-      <h>30</h>
+      <x>306</x>
+      <y>153</y>
+      <w>81</w>
+      <h>27</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
