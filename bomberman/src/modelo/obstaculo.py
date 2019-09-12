@@ -1,4 +1,3 @@
-from visible import Visible
-
-class Obstaculo(Visible):
-    def __init__(self, celda)
+class Obstaculo():
+    def __init__(self):
+        pass
