@@ -10,54 +10,43 @@ from pared_rompible import Pared_rompible
 class Mapa:
     def __init__(self, map_tiles):
         # Aca lee el mapa y crea todas las celdas.
-
+        alto = 15
+        largo = 15
+        self.__init__(map_tiles, alto, largo)
         # Ahora voy a hacer un mapa default igual.
-        self.alto = 14
-        self.largo = 14
+
+
+    def __init__(self, alto, largo):
+        self.alto = alto
+        self.largo = largo
         self.celdas = []
-        for _ in range(0, 14):
+        for _ in range (0,self.alto):
             self.celdas.append([])
         # Primer fila
-        for i in range(0,14):
-            pared_no_rompible = Pared_no_rompible()
-            self.celdas[0].append(Celda(pared_no_rompible, 1, i + 1))
-        # segunda fila
-        pared_no_rompible = Pared_no_rompible()
-        self.celdas[1].append(Celda(pared_no_rompible, 2, 1))
-        for i in range(0,12):
-            c_dummy = Contenido_dummy()
-            self.celdas[1].append(Celda(c_dummy, 2, i + 2))
-        pared_no_rompible = Pared_no_rompible()
-        self.celdas[1].append(Celda(pared_no_rompible, 2, 14))
-        # fila 3 a 12
-        for i in range(1, 11):
-            pared = True
-            for j in range(0, 14):
-                if pared:
-                    pared_no_rompible = Pared_no_rompible()
-                    self.celdas[i + 1].append(Celda(pared_no_rompible, i + 1, j + 1))
+        for i in range(1, self.largo + 1):
+            contenido = Pared_no_rompible()
+            self.celdas[0].append(Celda(contenido, 1, i))
+        # filas del medio
+        for i in range(2, self.alto):
+            contenido = Pared_no_rompible()
+            self.celdas[i - 1].append(Celda(contenido, i, 1))
+            for j in range(2, self.largo):
+                if(i % 2 == 0):
+                    # Dummy
+                    contenido = Contenido_dummy()
+                    self.celdas[i - 1].append(Celda(contenido, i, j))
                 else:
-                    c_dummy = Contenido_dummy()
-                    self.celdas[i + 1].append(Celda(c_dummy, i + 1, j + 1))
-                pared = not pared
-        # 13ava fila
-        pared_no_rompible = Pared_no_rompible()
-        self.celdas[12].append(Celda(pared_no_rompible, 12, 1))
-        for i in range(0,12):
-            c_dummy = Contenido_dummy()
-            self.celdas[12].append(Celda(c_dummy, 13, i + 2))
-        pared_no_rompible = Pared_no_rompible()
-        self.celdas[12].append(Celda(pared_no_rompible, 13, 1))        
-        # 14ava fila
-        for i in range(0,14):
-            pared_no_rompible = Pared_no_rompible()
-            self.celdas[13].append(Celda(pared_no_rompible, 14, i + 1))
-        
-mt = None
-mapa = Mapa(mt)
-
-
-
-print("hola")
+                    # Paredes
+                    if(j % 2 == 0):
+                        contenido = Contenido_dummy()
+                    else:
+                        contenido = Pared_no_rompible()
+                    self.celdas[i - 1].append(Celda(contenido, i, j))
+            contenido = Pared_no_rompible()
+            self.celdas[i - 1].append(Celda(contenido, i, self.largo))
+        # Ultima fila
+        for i in range(1, self.largo + 1):
+            contenido = Pared_no_rompible()
+            self.celdas[self.alto - 1].append(Celda(contenido, self.largo, i))
 
         
