@@ -1,3 +1,3 @@
 class Obstaculo():
-    def __init__(self):
+    def obstaculizar(self, obstaculo_movil):
         pass

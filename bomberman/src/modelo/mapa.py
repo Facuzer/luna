@@ -48,5 +48,14 @@ class Mapa:
         for i in range(1, self.largo + 1):
             contenido = Pared_no_rompible()
             self.celdas[self.alto - 1].append(Celda(contenido, self.largo, i))
+        
+    def avisar_mov(self, pos, celda_anterior):
+        pass
+    
+    def poner_bomba(self, bomba, celda):
+        pass
+
+    def propagar_explosion(self, explosion):
+        pass
 
         

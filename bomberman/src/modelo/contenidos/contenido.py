@@ -6,3 +6,9 @@ from visible import Visible
 class Contenido(Visible):
     def __init__(self):
         pass
+    
+    def ser_caminado(self, caminador):
+        pass
+    
+    def ser_explotado(self):
+        pass
