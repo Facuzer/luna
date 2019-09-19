@@ -1,7 +1,7 @@
-from contenido import Contenido
+from objeto import Objeto
 
 
-class Pared_rompible(Contenido):
+class Pared_rompible(Objeto):
     def __init__(self):
         pass
     

@@ -12,7 +12,9 @@ class Mapa:
         # Aca lee el mapa y crea todas las celdas.
         alto = 15
         largo = 15
+        pixels_por_celda = 20
         self.__init__(map_tiles, alto, largo)
+
         # Ahora voy a hacer un mapa default igual.
 
 
@@ -49,13 +51,23 @@ class Mapa:
             contenido = Pared_no_rompible()
             self.celdas[self.alto - 1].append(Celda(contenido, self.largo, i))
         
-    def avisar_mov(self, pos, celda_anterior):
-        pass
-    
+    def avisar_mov(self, pos, celda_anterior, caminador):
+        # Hay que revisar si el movimiento es posible
+        celda_caminada = self.get_celda_desde_posicion(pos)
+        celda_caminada.ser_caminado(caminador)
+        return celda_caminada
+        
+        
     def poner_bomba(self, bomba, celda):
         pass
 
     def propagar_explosion(self, explosion):
         pass
 
-        
+    def get_celda_desde_posicion(self, pos):
+        fila = (pos[1] // 20) + 1
+        columna = (pos[0] // 20) + 1
+        return self.get_celda(fila, columna)
+    
+    def get_celda(self, fila, columna):
+        return self.celdas[fila+1][columna+1]

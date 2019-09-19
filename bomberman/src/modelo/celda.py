@@ -7,8 +7,8 @@ class Celda():
     def ser_explotado(self):
         pass
     
-    def ser_caminado(self):
-        pass
+    def ser_caminado(self, caminador):
+        self.contenido.ser_caminado(caminador)
 
     def poner_bomba(self, bomba):
         pass

@@ -7,16 +7,16 @@ class Personaje(Obstaculo_movil):
         self.vidas = 3
     
     def mover_arriba(self):
-        pass
+        self.mover(0,-self.velocidad)
     
     def mover_derecha(self):
-        pass
+        self.mover(self.velocidad, 0)
     
     def mover_abajo(self):
-        pass
+        self.mover(0,self.velocidad)
     
     def mover_izquierda(self):
-        pass
+        self.mover(-self.velocidad, 0)
     
     def poner_bomba(self):
         pass

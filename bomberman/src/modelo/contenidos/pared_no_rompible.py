@@ -1,5 +1,5 @@
-from contenido import Contenido
+from objeto import Objeto
 
-class Pared_no_rompible(Contenido):
+class Pared_no_rompible(Objeto):
     def __init__(self):
         self.contenido = contenido

@@ -1,6 +1,6 @@
-from contenido import Contenido
+from objeto import Objeto
 
 
-class Salida(Contenido):
+class Salida(Objeto):
     def __init__(self):
         pass
