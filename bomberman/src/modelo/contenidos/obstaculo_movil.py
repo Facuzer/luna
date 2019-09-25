@@ -9,9 +9,13 @@ class Obstaculo_movil(Obstaculo, Visible, Contenido):
         self.mapa = mapa
 
     def __mover(self, mov_x, mov_y):
-        self.pos[0] += mov_x
-        self.pos[1] += mov_y
-        self.mapa.avisar_mov(self.pos, self.celda_actual, self)
+        pos_tentativa = (self.pos[0] + mov_x, self.pos[1] + mov_y)
+        if self.mapa.comprobar_mov(pos_tentativa):
+            self.celda_actual = self.mapa.avisar_mov(self.pos, self.celda_actual, self)
+
+        
+        
+        
     
     def morir(self):
         pass

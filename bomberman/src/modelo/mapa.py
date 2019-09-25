@@ -59,7 +59,7 @@ class Mapa:
         
         
     def poner_bomba(self, bomba, celda):
-        pass
+        celda.poner_bomba(bomba)
 
     def propagar_explosion(self, explosion):
         pass
@@ -71,3 +71,6 @@ class Mapa:
     
     def get_celda(self, fila, columna):
         return self.celdas[fila+1][columna+1]
+    
+    def comprobar_mov(pos):
+        self.get_celda_desde_posicion()

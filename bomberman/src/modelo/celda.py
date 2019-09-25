@@ -11,4 +11,4 @@ class Celda():
         self.contenido.ser_caminado(caminador)
 
     def poner_bomba(self, bomba):
-        pass
+        self.contenido = bomba
