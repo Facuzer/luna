@@ -19,4 +19,7 @@ class Game():
         self.lista_de_enemigos = []
         for pos_enemigo in pos_enemigos:
             self.lista_de_enemigos.append(Enemigo(pos_enemigo))
+    
+    def get_posicion_personaje():
+        return self.personaje.get_posicion()
 

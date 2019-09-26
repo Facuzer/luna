@@ -4,6 +4,10 @@ class Celda():
         self.fila = fila
         self.columna = columna
     
+    def get_middle_pos(self):
+        ppc = 20
+        return [self.columna*ppc - ppc/2, self.fila*ppc - ppc/2]
+
     def ser_explotado(self):
         pass
     

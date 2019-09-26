@@ -1,6 +1,6 @@
 class Visible():
-    def __init__(self):
-        self.pos = []
+    def __init__(self, pos):
+        self.pos = pos
 
     def __get_pos_x(self):
         return self.pos[0]
