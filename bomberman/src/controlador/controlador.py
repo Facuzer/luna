@@ -12,17 +12,28 @@ class Controlador():
     def __init__(self):
         # init de la vista y el juego.
         self.game = Game()
+        self.vista = Vista(self.game)
+        self.cargar_imagenes()
+        self.main_loop()
     
     def cargar_imagenes(self):
-        self.vista.cargar_imagen_fondo(path + "img/fondo.jpg")
-        self.vista.cargar_imagen_bomberman(path + "img/bmsprite.jpg")
+        self.vista.cargar_imagen_fondo(path + "img/fondo.png")
+        self.vista.cargar_imagen_bomberman(path + "img/bmsprite.png", self.game.get_posicion_personaje())
     
     def main_loop(self):
         run = True
         while run:
             for event in pygame.event.get():
-                if event.type == pygame.QUIT: run = False
-
+                if event.type == pygame.QUIT: 
+                    run = False
                 if event.type == pygame.KEYDOWN:
+                    self.game.mover_bomberman(CONTROLES[str(event.key)])
+                    self.vista.recargar_fondo()
+                    self.vista.recargar_bomberman()
+
+            pygame.display.flip()
+    
+
+controlador = Controlador()
                     
 

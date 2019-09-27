@@ -1,4 +1,4 @@
-from celda import Celda
+from modelo.celda import Celda
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), 'contenidos'))
@@ -13,12 +13,12 @@ class Mapa:
         alto = 15
         largo = 15
         pixels_por_celda = 20
-        self.__init__(map_tiles, alto, largo)
+        self.a__init__(alto, largo)
 
         # Ahora voy a hacer un mapa default igual.
 
 
-    def __init__(self, alto, largo):
+    def a__init__(self, alto, largo):
         self.alto = alto
         self.largo = largo
         self.celdas = []
@@ -70,7 +70,8 @@ class Mapa:
         return self.get_celda(fila, columna)
     
     def get_celda(self, fila, columna):
-        return self.celdas[fila+1][columna+1]
-    
-    def comprobar_mov(pos):
-        self.get_celda_desde_posicion()
+        return self.celdas[int(fila+1)][int(columna+1)]
+
+    def comprobar_mov(self, pos):
+        celda_tentativa = self.get_celda_desde_posicion(pos)
+        return celda_tentativa.comprobar_mov()

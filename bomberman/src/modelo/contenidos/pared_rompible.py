@@ -6,4 +6,8 @@ class Pared_rompible(Objeto):
         pass
     
     def __romperse(self):
+        pass
+
+    def comprobar_mov(self):
+        return False
         

@@ -13,4 +13,7 @@ class Bomba(Obstaculo, Objeto):
     
     def explotar(self):
         pass
+
+    def comprobar_mov(self):
+        return False
         

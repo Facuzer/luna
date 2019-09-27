@@ -1,6 +1,6 @@
 class Visible():
     def __init__(self, pos):
-        self.pos = pos
+        self.__set_pos(pos)
 
     def __get_pos_x(self):
         return self.pos[0]
@@ -13,3 +13,6 @@ class Visible():
 
     def __set_pos_y(self, pos_y):
         self.pos[1] = pos_y
+    
+    def __set_pos(self, pos):
+        self.pos = pos

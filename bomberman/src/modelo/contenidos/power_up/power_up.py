@@ -6,3 +6,6 @@ from contenido import Contenido
 class Power_up(Contenido):
     def __init__(self):
         pass
+
+    def comprobar_mov(self):
+        return True

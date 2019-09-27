@@ -1,10 +1,10 @@
 import pygame
 
 class Vista():
-    def __init__(self, game, dimensiones):
+    def __init__(self, game):
         pygame.init()
         self.game = game
-        self.dimensiones = dimensiones
+        self.dimensiones = (640, 480)
         self.fondo = None
         self.screen = pygame.display.set_mode(self.dimensiones)
         self.bomberman = None
@@ -23,4 +23,4 @@ class Vista():
         self.screen.blit(self.fondo, [0,0])
     
     def recargar_bomberman(self):
-        self.screen.blit(self.bomberman, self.juego.get_posicion_bomberman())
+        self.screen.blit(self.bomberman, self.game.get_posicion_personaje())

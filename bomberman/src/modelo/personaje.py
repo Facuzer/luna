@@ -1,4 +1,4 @@
-from obstaculo_movil import Obstaculo_movil
+from modelo.contenidos.obstaculo_movil import Obstaculo_movil
 
 class Personaje(Obstaculo_movil):
     def __init__(self, celda_inicial, mapa):
@@ -8,6 +8,9 @@ class Personaje(Obstaculo_movil):
         self.delay_bomba = 3
         self.nivel_explosion = 1
     
+    def get_posicion(self):
+        return self.pos
+
     def mover_arriba(self):
         self.__mover(0,-self.velocidad)
     

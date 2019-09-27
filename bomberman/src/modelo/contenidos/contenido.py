@@ -4,3 +4,6 @@ class Contenido():
     
     def ser_explotado(self):
         pass
+
+    def comprobar_mov(self):
+        pass

@@ -16,3 +16,6 @@ class Celda():
 
     def poner_bomba(self, bomba):
         self.contenido = bomba
+
+    def comprobar_mov(self):
+        return self.contenido.comprobar_mov()
