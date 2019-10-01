@@ -13,5 +13,5 @@ class Enemigo(Obstaculo_movil):
     def mover_izquierda(self):
         self.mover(-self.velocidad, 0)
 
-    def __mover_random(self):
+    def _mover_random(self):
         pass

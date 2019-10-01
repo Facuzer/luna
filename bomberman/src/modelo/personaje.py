@@ -12,23 +12,23 @@ class Personaje(Obstaculo_movil):
         return self.pos
 
     def mover_arriba(self):
-        self.__mover(0,-self.velocidad)
+        self._mover(0,-self.velocidad)
     
     def mover_derecha(self):
-        self.__mover(self.velocidad, 0)
+        self._mover(self.velocidad, 0)
     
     def mover_abajo(self):
-        self.__mover(0,self.velocidad)
+        self._mover(0,self.velocidad)
     
     def mover_izquierda(self):
-        self.__mover(-self.velocidad, 0)
+        self._mover(-self.velocidad, 0)
     
     def poner_bomba(self):
         bomba = Bomba(self.nivel_explosion, self.delay_bomba, self.mapa)
         self.mapa.poner_bomba(bomba,self.celda_actual)
     
-    def __set_celda_actual(self, celda_actual):
+    def _set_celda_actual(self, celda_actual):
         self.celda_actual = celda_actual
     
-    def __get_celda_actual(self, celda_actual):
+    def _get_celda_actual(self, celda_actual):
         return self.celda_actual

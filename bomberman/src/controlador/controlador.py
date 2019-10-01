@@ -17,8 +17,8 @@ class Controlador():
         self.main_loop()
     
     def cargar_imagenes(self):
-        self.vista.cargar_imagen_fondo(path + "img/fondo.png")
-        self.vista.cargar_imagen_bomberman(path + "img/bmsprite.png", self.game.get_posicion_personaje())
+        #self.vista.cargar_imagen_fondo(path + "img/fondo.png")
+        self.vista.cargar_imagen_bomberman(path + "img/bmsprite2.png", self.game.get_posicion_personaje())
     
     def main_loop(self):
         run = True
@@ -28,8 +28,10 @@ class Controlador():
                     run = False
                 if event.type == pygame.KEYDOWN:
                     self.game.mover_bomberman(CONTROLES[str(event.key)])
-                    self.vista.recargar_fondo()
-                    self.vista.recargar_bomberman()
+                    
+            # self.vista.recargar_fondo()
+            self.vista.recargar_contenidos()
+            self.vista.recargar_bomberman()
 
             pygame.display.flip()
     

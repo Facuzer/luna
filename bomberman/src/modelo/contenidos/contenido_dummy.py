@@ -5,7 +5,7 @@ from objeto import Objeto
 
 class Contenido_dummy(Objeto):
     def __init__(self):
-        pass
+        self.ruta = "img/dummy.png"        
     
     def comprobar_mov(self):
         return True

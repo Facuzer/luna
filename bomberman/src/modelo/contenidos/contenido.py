@@ -7,3 +7,6 @@ class Contenido():
 
     def comprobar_mov(self):
         pass
+
+    def get_ruta(self):
+        return self.ruta

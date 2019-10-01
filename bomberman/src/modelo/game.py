@@ -12,8 +12,8 @@ class Game():
         player_conf = None
         self.ic = Input_controller(player_conf)
         # Aca lee donde esta parado el personaje.
-        fila_pj = 1
-        col_pj = 1
+        fila_pj = 2
+        col_pj = 2
         celda_pj = self.mapa.get_celda(fila_pj, col_pj)
         self.personaje = Personaje(celda_pj, self.mapa)
         # Aca lee donde está cada enemigo y los crea.
@@ -31,7 +31,10 @@ class Game():
         elif (direccion ==  [1, 0]):
             self.personaje.mover_derecha()
         elif (direccion == [0, -1]):
-            self.personaje.mover_abajo()
-        elif (direccion == [0, 1]):
             self.personaje.mover_arriba()
+        elif (direccion == [0, 1]):
+            self.personaje.mover_abajo()
+
+    def get_all_celdas(self):
+        return self.mapa.get_all_celdas()
 

@@ -70,8 +70,11 @@ class Mapa:
         return self.get_celda(fila, columna)
     
     def get_celda(self, fila, columna):
-        return self.celdas[int(fila+1)][int(columna+1)]
+        return self.celdas[int(fila-1)][int(columna-1)]
 
     def comprobar_mov(self, pos):
         celda_tentativa = self.get_celda_desde_posicion(pos)
         return celda_tentativa.comprobar_mov()
+
+    def get_all_celdas(self):
+        return self.celdas

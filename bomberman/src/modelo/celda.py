@@ -19,3 +19,12 @@ class Celda():
 
     def comprobar_mov(self):
         return self.contenido.comprobar_mov()
+
+    def get_pos(self):
+        ppc = 20
+        pos_x = (self.columna - 1) * ppc
+        pos_y = (self.fila - 1) * ppc
+        return [pos_x, pos_y]
+
+    def get_ruta_contenido(self):
+        return self.contenido.get_ruta()

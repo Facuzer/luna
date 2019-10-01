@@ -1,4 +1,5 @@
 import pygame
+path = "C:/Users/huergo/luna/bomberman/"
 
 class Vista():
     def __init__(self, game):
@@ -24,3 +25,9 @@ class Vista():
     
     def recargar_bomberman(self):
         self.screen.blit(self.bomberman, self.game.get_posicion_personaje())
+
+    def recargar_contenidos(self):
+        celdas = self.game.get_all_celdas() 
+        for fila in celdas:
+            for celda in fila:
+                self.screen.blit(pygame.image.load(path + celda.get_ruta_contenido()), celda.get_pos())
