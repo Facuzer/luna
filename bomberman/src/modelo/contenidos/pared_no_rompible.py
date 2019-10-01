@@ -5,4 +5,4 @@ class Pared_no_rompible(Objeto):
         self.ruta = "img/pared_no_rompible.png"
     
     def comprobar_mov(self):
-        return False
+       return False

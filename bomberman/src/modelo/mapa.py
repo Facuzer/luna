@@ -12,7 +12,7 @@ class Mapa:
         # Aca lee el mapa y crea todas las celdas.
         alto = 15
         largo = 15
-        pixels_por_celda = 20
+        self.ppc = 40
         self.a__init__(alto, largo)
 
         # Ahora voy a hacer un mapa default igual.
@@ -27,29 +27,29 @@ class Mapa:
         # Primer fila
         for i in range(1, self.largo + 1):
             contenido = Pared_no_rompible()
-            self.celdas[0].append(Celda(contenido, 1, i))
+            self.celdas[0].append(Celda(contenido, 1, i, self.ppc))
         # filas del medio
         for i in range(2, self.alto):
             contenido = Pared_no_rompible()
-            self.celdas[i - 1].append(Celda(contenido, i, 1))
+            self.celdas[i - 1].append(Celda(contenido, i, 1, self.ppc))
             for j in range(2, self.largo):
                 if(i % 2 == 0):
                     # Dummy
                     contenido = Contenido_dummy()
-                    self.celdas[i - 1].append(Celda(contenido, i, j))
+                    self.celdas[i - 1].append(Celda(contenido, i, j, self.ppc))
                 else:
                     # Paredes
                     if(j % 2 == 0):
                         contenido = Contenido_dummy()
                     else:
                         contenido = Pared_no_rompible()
-                    self.celdas[i - 1].append(Celda(contenido, i, j))
+                    self.celdas[i - 1].append(Celda(contenido, i, j, self.ppc))
             contenido = Pared_no_rompible()
-            self.celdas[i - 1].append(Celda(contenido, i, self.largo))
+            self.celdas[i - 1].append(Celda(contenido, i, self.largo, self.ppc))
         # Ultima fila
         for i in range(1, self.largo + 1):
             contenido = Pared_no_rompible()
-            self.celdas[self.alto - 1].append(Celda(contenido, self.largo, i))
+            self.celdas[self.alto - 1].append(Celda(contenido, self.largo, i, self.ppc))
         
     def avisar_mov(self, pos, celda_anterior, caminador):
         # Hay que revisar si el movimiento es posible
@@ -65,8 +65,8 @@ class Mapa:
         pass
 
     def get_celda_desde_posicion(self, pos):
-        fila = (pos[1] // 20) + 1
-        columna = (pos[0] // 20) + 1
+        fila = (pos[1] // self.ppc) + 1
+        columna = (pos[0] // self.ppc) + 1
         return self.get_celda(fila, columna)
     
     def get_celda(self, fila, columna):

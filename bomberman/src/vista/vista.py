@@ -5,11 +5,11 @@ class Vista():
     def __init__(self, game):
         pygame.init()
         self.game = game
-        self.dimensiones = (640, 480)
+        self.dimensiones = (600, 600)
         self.fondo = None
         self.screen = pygame.display.set_mode(self.dimensiones)
         self.bomberman = None
-        pygame.key.set_repeat(20)
+        pygame.key.set_repeat(10)
 
     def cargar_imagen_fondo(self, path_fondo):
         self.fondo = pygame.image.load(path_fondo)
