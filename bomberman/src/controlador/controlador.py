@@ -19,6 +19,7 @@ class Controlador():
     def cargar_imagenes(self):
         #self.vista.cargar_imagen_fondo(path + "img/fondo.png")
         self.vista.cargar_imagenes_bomberman(path, self.game.get_posicion_personaje())
+        self.vista.cargar_imagenes_enemigo(path)
     
     def main_loop(self):
         run = True
@@ -31,7 +32,9 @@ class Controlador():
                     
             # self.vista.recargar_fondo()
             self.vista.recargar_contenidos()
+            self.vista.recargar_enemigos()
             self.vista.recargar_bomberman()
+
 
             pygame.display.flip()
     
