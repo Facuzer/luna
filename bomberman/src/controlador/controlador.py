@@ -4,7 +4,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from vista.vista import Vista
 import pygame
 from modelo.game import Game
-path = "C:/Users/huergo/luna/bomberman/"
+path = "C:/Users/huergo/Desktop/luna/bomberman/"
 
 CONTROLES = {'273': [0, -1], '274': [0, 1], '275': [1, 0], '276': [-1, 0]}
 
@@ -18,7 +18,7 @@ class Controlador():
     
     def cargar_imagenes(self):
         #self.vista.cargar_imagen_fondo(path + "img/fondo.png")
-        self.vista.cargar_imagen_bomberman(path + "img/bmsprite2.png", self.game.get_posicion_personaje())
+        self.vista.cargar_imagenes_bomberman(path, self.game.get_posicion_personaje())
     
     def main_loop(self):
         run = True

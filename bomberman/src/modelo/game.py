@@ -37,4 +37,10 @@ class Game():
 
     def get_all_celdas(self):
         return self.mapa.get_all_celdas()
+    
+    def get_direccion_bm(self):
+        return self.personaje.get_direccion()
+
+    def get_index_bm(self):
+        return self.personaje.get_index_img()
 
