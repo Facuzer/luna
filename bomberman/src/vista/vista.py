@@ -6,7 +6,7 @@ class Vista():
     def __init__(self, game):
         pygame.init()
         self.game = game
-        self.dimensiones = (600, 600)
+        self.dimensiones = (675, 675)
         self.fondo = None
         self.screen = pygame.display.set_mode(self.dimensiones)
         self.bomberman = None
@@ -58,7 +58,7 @@ class Vista():
         pos_bomb = (int(pos_bomb[0]), int(pos_bomb[1]))
         rect = self.bomberman.get_rect()
         rect.centerx = pos_bomb[0]
-        rect.centery = pos_bomb[1] - 10
+        rect.centery = pos_bomb[1] - 35
         self.screen.blit(self.bomberman, rect)
         # pygame.draw.circle(self.screen, pygame.Color(230, 95, 0), pos_bomb, 5)
 

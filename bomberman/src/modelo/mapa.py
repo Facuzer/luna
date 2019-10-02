@@ -12,7 +12,7 @@ class Mapa:
         # Aca lee el mapa y crea todas las celdas.
         alto = 15
         largo = 15
-        self.ppc = 40
+        self.ppc = 45
         self.a__init__(alto, largo)
 
         # Ahora voy a hacer un mapa default igual.
