@@ -17,7 +17,7 @@ class Game():
         celda_pj = self.mapa.get_celda(fila_pj, col_pj)
         self.personaje = Personaje(celda_pj, self.mapa)
         # Aca lee donde está cada enemigo y los crea.
-        pos_enemigos = [(2, 2), (2, 3), (5, 1)]
+        pos_enemigos = [(2, 8)]
         self.lista_de_enemigos = []
         for pos_enemigo in pos_enemigos:
             self.lista_de_enemigos.append(Enemigo(self.mapa.get_celda(pos_enemigo[0], pos_enemigo[1]), self.mapa))
@@ -43,4 +43,7 @@ class Game():
 
     def get_index_bm(self):
         return self.personaje.get_index_img()
+
+    def get_lista_enemigos(self):
+        return self.lista_de_enemigos
 

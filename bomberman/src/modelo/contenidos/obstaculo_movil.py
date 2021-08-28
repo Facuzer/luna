@@ -6,10 +6,15 @@ class Obstaculo_movil(Visible, Contenido):
         super().__init__(celda_inicial.get_middle_pos())
         self.velocidad = 0
         self.celda_actual = celda_inicial
-        self.mapa = mapa   
+        self.mapa = mapa
+        self.direccion = "abajo"
+        self.img_index = 0
+
+    def get_direccion(self):
+        return self.direccion        
     
-        def get_posicion(self):
-            return self.pos
+    def get_posicion(self):
+        return self.pos
 
     def mover_arriba(self):
         self._mover(0,-self.velocidad)
@@ -40,12 +45,16 @@ class Obstaculo_movil(Visible, Contenido):
                 self.img_index = 0
             else:
                 self.img_index += 1
+
     def morir(self):
         pass
 
     def comprobar_mov(self):
         return True
     
+    def get_index_img(self):
+        return self.img_index
+
     def _mover(self, mov_x, mov_y):
         pos_tentativa = (self._get_pos_x() + mov_x, self._get_pos_y() + mov_y)
         if self.mapa.comprobar_mov(pos_tentativa):
